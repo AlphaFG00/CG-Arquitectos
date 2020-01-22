@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Nombre: Ismael Lopez Larumbe"/>
+    <HelloWorld msg="Prueba de PUSH"/>
   </div>
 </template>
 
