@@ -1,32 +1,40 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link :to="{name: 'Proyectos'}">Proyectos</router-link> |
-      <router-link :to="{name: 'Servicios'}">Servicios</router-link>
-    </div>
+
+    <b-navbar toggleable="lg" type="dark" id="nav-bg">
+      <b-container>
+        <b-navbar-brand :to="{name: 'home'}" id="nav-font-title">ARQUITECTURA</b-navbar-brand>
+        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+        <b-collapse id="nav-collapse" is-nav>
+          <b-navbar-nav id="nav-font">
+            <b-nav-item :to="{name: 'home'}"> Inicio</b-nav-item>
+            <b-nav-item :to="{name: 'Proyectos'}"> Proyectos</b-nav-item>
+            <b-nav-item :to="{name: 'Servicios'}"> Servicios</b-nav-item>
+          </b-navbar-nav>
+        </b-collapse>
+
+      </b-container>
+    </b-navbar>
+
     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+#nav-bg{
+    background: linear-gradient(70deg, black, grey);
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
+#nav-font-title{
+  font-family: "Times New Roman", Times, serif;
   font-weight: bold;
-  color: #2c3e50;
+  background: -webkit-linear-gradient(#69550b ,#d1ba69, #8f7411);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#nav-font{
+font-family: "Times New Roman", Times, serif;
+color: linear-gradient(70deg, black, grey);
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
