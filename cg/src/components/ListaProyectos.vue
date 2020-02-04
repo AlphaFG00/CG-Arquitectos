@@ -2,25 +2,68 @@
     <div class="lista-proyectos">
       <b-container fluid>
         <b-row class="contenedor">
-          <b-col v-for="imagen of images" :key="imagen.id"
-          cols="12" md="6" lg="4" class="thumbex">
-            <div class="thumbnail">
-              <a href="javascript:void(0)">
-                <b-img fluid :src="getImgUrl(imagen)" v-bind:alt="imagen" class="img-proyecto"></b-img>
-                <span>Nombre del proyecto</span>
-              </a>
+          <b-col cols="12" md="6" lg="4" class="thumbex">
+            <div class="thumbnail" @click="showModel(0)">
+                <b-img fluid :src="getImgUrl(images[0].name)" :alt="images[0].name" class="img-proyecto"></b-img>
+                <span>{{images[0].title}}</span>
+            </div>
+          </b-col>
+          <b-col cols="12" md="6" lg="4" class="thumbex">
+            <div class="thumbnail" @click="showModel(1)">
+                <b-img fluid :src="getImgUrl(images[1].name)" :alt="images[1].name" class="img-proyecto"></b-img>
+                <span>{{images[1].title}}</span>
+            </div>
+          </b-col>
+          <b-col cols="12" md="6" lg="4" class="thumbex">
+            <div class="thumbnail" @click="showModel(2)">
+                <b-img fluid :src="getImgUrl(images[2].name)" :alt="images[2].name" class="img-proyecto"></b-img>
+                <span>{{images[2].title}}</span>
+            </div>
+          </b-col>
+          <b-col cols="12" md="6" lg="4" class="thumbex">
+            <div class="thumbnail" @click="showModel(3)">
+                <b-img fluid :src="getImgUrl(images[3].name)" :alt="images[3].name" class="img-proyecto"></b-img>
+                <span>{{images[3].title}}</span>
+            </div>
+          </b-col>
+          <b-col cols="12" md="6" lg="4" class="thumbex">
+            <div class="thumbnail" @click="showModel(4)">
+                <b-img fluid :src="getImgUrl(images[4].name)" :alt="images[4].name" class="img-proyecto"></b-img>
+                <span>{{images[4].title}}</span>
+            </div>
+          </b-col>
+          <b-col cols="12" md="6" lg="4" class="thumbex">
+            <div class="thumbnail" @click="showModel(5)">
+                <b-img fluid :src="getImgUrl(images[5].name)" :alt="images[5].name" class="img-proyecto"></b-img>
+                <span>{{images[5].title}}</span>
             </div>
           </b-col>
         </b-row>
       </b-container>
-    </div>
+      <div>
+        <ModalAltitude :proyectTitle="images[0].title" :ref="0"/>
+        <ModalApaches :proyectTitle="images[1].title" :ref="1"/>
+        <ModalFinox :proyectTitle="images[2].title" :ref="2"/>
+        <ModalHuasteca :proyectTitle="images[3].title" :ref="3"/>
+        <ModalLeonDavid :proyectTitle="images[4].title" :ref="4"/>
+        <ModalLasAguilas :proyectTitle="images[5].title" :ref="5"/>
+      </div>
+</div>
 </template>
 
 <script>
 import {mapState} from 'vuex'
-
+import ModalAltitude from '@/components/ModalAltitude.vue'
+import ModalApaches from '@/components/ModalApaches.vue'
+import ModalFinox from '@/components/ModalFinox.vue'
+import ModalHuasteca from '@/components/ModalHuasteca.vue'
+import ModalLeonDavid from '@/components/ModalLeonDavid.vue'
+import ModalLasAguilas from '@/components/ModalLasAguilas.vue'
 export default {
     name:'ListaProyectos',
+    components:{
+          ModalAltitude,ModalApaches,ModalFinox,ModalHuasteca,ModalLeonDavid,ModalLasAguilas
+    },
     computed:{
         ...mapState(['images'])
     },
@@ -28,6 +71,10 @@ export default {
         getImgUrl(pet) {
             var images = require.context('../assets/imagenproyectos/', false, /\.jpg$/)
             return images('./' + pet + ".jpg")
+        },
+        showModel(index){
+         var mod=this.$refs[index].$refs.myModal
+         mod.classList.add("show-modal");
         }
     }
 }
@@ -44,6 +91,7 @@ export default {
 }
 .contenedor>.thumbex {
   overflow: hidden;
+  margin:auto;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -56,23 +104,24 @@ export default {
   backface-visibility: hidden;
   transition: all 0.4s ease-out;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .contenedor>.thumbex>.thumbnail .img-proyecto {
   z-index: 1;
-  min-height: 170px;
+  min-height: 200px;
 }
 
 .contenedor>.thumbex>.thumbnail span{
   position: absolute;
   z-index: 2;
-  top: 35%;
+  top: 30%;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.432);
   padding: 10px 30px;
   margin: 0 40px;
   text-align: center;
+  background: rgba(0, 0, 0, 0.432);
   font-size: 20px;
   color: white;
   font-weight: 200;

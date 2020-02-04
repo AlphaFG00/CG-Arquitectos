@@ -1,21 +1,32 @@
 <template>
-    <div class="ventana-model">
+    <div class="Modal-Altitude">
       <div class="modal" id="myModal" ref="myModal">
-        <div class="contenido">
+        <b-container class="contenido">
             <span class="cerrar" ref="myClose">&times;</span>
             <h2>{{proyectTitle}}</h2>
-            <img :src="require(`../assets/imagenproyectos/1.jpg`)" alt="Image window">
+            <b-img class="proyecto-imagen" :src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE-2.jpg`)" alt="Imagen-Proyecto-Altitude"></b-img>
             <div class="proyecto-texto">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo voluptatem quasi, deserunt saepe possimus facilis necessitatibus dolores eaque sequi, tempora minima! Consequuntur, amet repellat fugiat optio laudantium ut eius rem.</p>
+                <span class="Modal-Titulo1">
+                    <p>Descripción</p>
+                    <p>Diseño y construcción para adecuacion de 2 pisos para departamentos.</p>
+                </span>
+                <span class="Modal-Titulo2">
+                    <p>Ubicación:</p>
+                    <p>Zapopan, Jalisco. </p>
+                </span>
+                <span class="Modal-Titulo3">
+                    <p>Superficie</p>
+                    <p> 600.00 m2</p>
+                </span>
             </div>
-        </div>
+        </b-container>
       </div>
     </div>
 </template>
 
 <script>
 export default {
-    name:'VentanaModel',
+    name:'ModalAltitude',
     props:{
       proyectTitle:{
         type: String,
@@ -50,26 +61,29 @@ export default {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color:transparent; /* Black w/ opacity */
-  transition: all 1s ease;
-}
-.modal{
-  z-index:10;
+ /* Black w/ opacity */
   transition: all 1s ease;
 }
 
-.contenido img{
-  width: 50%;
-  max-width: 25em;
-  max-height: 15em;
+.modal{
+  z-index:10;
+  background-color: aqua;
+}
+
+.contenido .proyecto-imagen{
   display: block;
+  align-content: center;
+  max-width: 90%;
+  max-height: 40vh;
   margin-right: auto;
   margin-left: auto;
 }
 .contenido{
-  margin: auto;
-  max-width: 60em;
-  max-height: 400em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100vh;
+  max-height: 100vh;
+  height: 100%;
   background-color: green;
   border-style: solid;
 }

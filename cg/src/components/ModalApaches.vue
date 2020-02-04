@@ -1,12 +1,12 @@
 <template>
-    <div class="ventana-model">
+    <div class="Modal-Apaches">
       <div class="modal" id="myModal" ref="myModal">
         <div class="contenido">
             <span class="cerrar" ref="myClose">&times;</span>
             <h2>{{proyectTitle}}</h2>
-            <img :src="require(`../assets/imagenproyectos/1.jpg`)" alt="Image window">
+            <img :src="require(`../assets/imagenproyectos/2.jpg`)" alt="Imagen-Proyecto-Apaches">
             <div class="proyecto-texto">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo voluptatem quasi, deserunt saepe possimus facilis necessitatibus dolores eaque sequi, tempora minima! Consequuntur, amet repellat fugiat optio laudantium ut eius rem.</p>
+                <p>Texto independiente 2</p>
             </div>
         </div>
       </div>
@@ -15,7 +15,7 @@
 
 <script>
 export default {
-    name:'VentanaModel',
+    name:'ModalApaches',
     props:{
       proyectTitle:{
         type: String,

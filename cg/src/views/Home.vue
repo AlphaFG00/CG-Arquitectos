@@ -1,7 +1,8 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Prueba de PUSH"/>
+    <b-container>
+      <p></p>
+    </b-container>
   </div>
 </template>
 
@@ -17,3 +18,9 @@ export default {
  
 }
 </script>
+
+<style scoped>
+.home{
+  color: white;
+}
+</style>
