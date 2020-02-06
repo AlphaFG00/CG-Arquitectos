@@ -9,8 +9,10 @@
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav id="nav-font">
             <b-nav-item :to="{name: 'home'}"> Inicio</b-nav-item>
+            <b-nav-item :to="{name: 'Quienes'}" > ¿Quienes Somos?</b-nav-item>
             <b-nav-item :to="{name: 'Proyectos'}"> Proyectos</b-nav-item>
             <b-nav-item :to="{name: 'Servicios'}"> Servicios</b-nav-item>
+              <b-nav-item :to="{name: 'Contacto'}" >Contacto</b-nav-item> 
           </b-navbar-nav>
         </b-collapse>
 

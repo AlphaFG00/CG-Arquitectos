@@ -1,7 +1,7 @@
 <template>
   <div class="proyectos">
     <b-container id="view-proyectos">
-      <p class="titulo-proyectos">Nuestros Proyectos</p>
+      <p class="titulo-proyectos">Lo mas Destacado</p>
         <ListaProyectos class="list-animation"/>
     </b-container>
   </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="proyectos">
     <b-container id="view-proyectos">
-      <p class="titulo-proyectos">Catalogo</p>
+      <p class="titulo-proyectos">Comunicate con Nosotros</p>
         <ListaProyectos class="list-animation"/>
     </b-container>
   </div>
@@ -10,7 +10,7 @@
 <script>
 import ListaProyectos from '@/components/ListaProyectos.vue'
 export default {
-  name:"Quienes",
+  name:"Contacto",
   components:{
     ListaProyectos
   }
