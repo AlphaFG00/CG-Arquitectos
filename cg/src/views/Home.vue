@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <b-container>
+      <p></p>
+    </b-container>
   </div>
 </template>
 
@@ -10,6 +12,15 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'home',
+  components:{
+    HelloWorld
+  }
  
 }
 </script>
+
+<style scoped>
+.home{
+  color: white;
+}
+</style>

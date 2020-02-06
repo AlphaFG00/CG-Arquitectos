@@ -1,0 +1,46 @@
+https://www.ten-arquitectos.com/about
+Pc:
+Las fuente del menu
+Movil:
+El tamaño y el como se comporta el menu en el movil, el diseño no tanto.
+----------------------
+Pc:
+El efecto de inicio al entrar o recargar la pagina en el inicio por primera vez, El menu al desplegarse proyects
+---------
+https://craftarquitectos.com.mx
+PC al cambio automatico de la pagina de inidi, su meno en css y diseño en general,
+------------------------
+https://costaarquitectura.com
+PC: La trannsicion de lla pagina
+Movil:
+cambiar la imagen automaticamente
+
+https://www.rima.com.mx/proyectos
+
+Pc transisiones super proooo!!!,
+movil: se conserva las tranciciones, tarda en cargar.
+
+Sin barras dezplazadoras en su pag inicio.
+-----------------
+https://www.torres.es/es/inicio
+paleta de colores, animacion de inicio.
+---------------------------
+copia de proyectos :v
+https://pasd.de/projekte/
+----------------------
+https://honoizakaya.com/fr
+algun efecto a copiar para inspirarse
+
+
+
+
+
+
+
+
+
+
+------------------------Utilidades---------
+https://www.sequencejs.com
+https://speckyboy.com/page-transition-effects/
+https://swiperjs.com
