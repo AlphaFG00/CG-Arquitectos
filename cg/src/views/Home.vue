@@ -1,7 +1,10 @@
 <template>
   <div class="home">
     <b-container>
-      <p></p>
+      <div class="titulo-inicio">
+        <p>INICIO</p>
+        <p></p>
+      </div>
     </b-container>
   </div>
 </template>
@@ -21,6 +24,6 @@ export default {
 
 <style scoped>
 .home{
-  color: white;
+
 }
 </style>
