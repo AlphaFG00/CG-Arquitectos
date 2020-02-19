@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <b-navbar toggleable="lg" type="dark" id="nav-bg">
+    <b-navbar toggleable="lg" type="light" id="nav-bg">
       <b-container>
         <b-navbar-brand :to="{name: 'home'}" class="brillo"><img src="./assets/logoc+g.png" alt="Logo" class="logo-empresa"><span></span></b-navbar-brand>
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -23,13 +23,13 @@
 
 <style>
 #nav-bg{
-    background: linear-gradient(160deg, rgb(114, 113, 113) 10%,rgb(41, 39, 39) 30%, rgb(75, 75, 75)90%);
+    background: linear-gradient(160deg, rgb(255, 255, 255) 10%,rgb(240, 237, 237) 40%, rgb(255, 255, 255)50%);
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 2;
     border-width: .1em !important;
     border-bottom: solid;
-    border-color: rgb(235, 190, 95);
+    border-color: #A37e2c;
 }
 /*
 #nav-font-title{
@@ -47,13 +47,15 @@
   font-size:.68em;
 }
 */
+#nav-collapse{
+      color: rgb(12, 105, 12) !important;
+}
 #nav-font{
 font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-color: linear-gradient(70deg, black, grey);
 }
 #nav-fix{
   padding-top: 5em;
-  background-color: #212121;
+  background-color: #ffffff;
   min-height: 100vh;
 }
 .logo-empresa{
