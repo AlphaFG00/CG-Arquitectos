@@ -34,6 +34,6 @@ export default {
 /*    border-left-color: rgb(221, 204, 158);*/
   } 
 .home{
-  color: white;
+
 }
 </style>
