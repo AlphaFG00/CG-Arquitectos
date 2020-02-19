@@ -29,7 +29,20 @@ const routes = [
     name: 'Servicios',
     component: () => import(/* webpackChunkName: "about" */ '../views/Servicios.vue')
 
-  }
+  },
+  {
+    path: '/quienes',
+    name: 'Quienes',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Quienes.vue')
+
+  },
+  {
+    path: '/contacto',
+    name: 'Contacto',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Contacto.vue')
+
+  },
+
 ]
 
 const router = new VueRouter({
