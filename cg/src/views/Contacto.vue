@@ -3,9 +3,9 @@
     <b-container id="view-contacto">
     <!--Estructura para el efecto del titulo INICIO-->
       <div class="Titulo-Cuerpo">
-        <div class="titulo-letra">Nuestros</div>
+        <div class="titulo-letra">Conectate con</div>
         <div class="titulo-restante">
-          <span>Servicios</span>
+          <span>nosotros</span>
         </div>
       </div>
     <!--Estructura para el efecto del titulo INICIO-->
@@ -24,30 +24,107 @@ export default {
 </script>
 
 <style scoped>
-  .Contacto{
+ .Contacto{
     width: auto;
     min-height: 100vh;
-    border-color: black;
-    background-color: #212121;
     padding-bottom: 10px;
   }
   #view-contacto{
     background-color:transparent;
-  }
-  #view-contacto .titulo-contacto{
-    color: lightgray;
     text-align: center;
-    font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif !important;
-    font-size: 2em;
-    animation-duration: 1s;
-    animation-name: slideinright;
-    background-color: transparent;
-    border-width: 4px;
-    border-bottom:double rgb(219, 196, 132);
-    border-top:double rgb(219, 196, 132);
-/*    border-left-color: rgb(221, 204, 158);*/
+  }
+  .Titulo-Cuerpo{
+  display: inline-block;
+  width: 60vw;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  border-width: 4px;
+  border-bottom:double rgb(219, 196, 132);
+  border-top:double rgb(219, 196, 132);
+  animation-duration: 1s;
+  animation-name: slideinright;
+  margin-top: 15px;
+  margin-bottom: 10px;
+
   }
 
+  .titulo-letra, .titulo-restante{
+    display: inline-block;
+    overflow: hidden;
+    color: #A37e2c;
+    font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif !important;
+    font-size: 2em;
+  }
+  .titulo-letra{
+    animation: showup 5s forwards;
+  }
+
+  .titulo-restante{
+    width: 0px;
+    animation: reveal 5s .4s forwards;
+  }
+
+  .titulo-restante span{
+    margin-left: -100px;
+    animation: slidein 5s .4s forwards;
+  }
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+    margin-right: 100px;
+  }
+  10% {
+    opacity: 1;
+    margin-right: 0px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: -800px;
+  }
+  10% {
+    margin-left: -800px;
+  }
+  30% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  10% {
+    opacity: 1;
+    width: 0px;
+  }
+  25% {
+    width: 148px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    width: 148px;
+  }
+}
   @keyframes slideinright {
     from {
       margin-left: 100%;
@@ -55,16 +132,6 @@ export default {
     }
     to {
       margin-left: 0%;
-      width: 100%;
-    }
-  }
-  @keyframes slideinleft {
-    from {
-      margin-right: 100%;
-      width: 0%;
-    }
-    to {
-      margin-right: 0%;
       width: 100%;
     }
   }

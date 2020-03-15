@@ -95,4 +95,13 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     transition-property: all;
     transition-duration: 1.5s;
 }
+
+.nav-item a:hover{
+  color: rgb(11, 63, 11) !important;
+}
+.nav-item a{
+  color: black !important;
+}
+
+
 </style>

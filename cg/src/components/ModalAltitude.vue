@@ -1,7 +1,7 @@
 <template>
     <div class="Modal-Altitude">
       <div class="modal" id="myModal" ref="myModal">
-        <b-container class="contenido">
+        <div class="contenido">
             <span class="cerrar" ref="myClose">&times;</span>
             <h2>{{proyectTitle}}</h2>
             <b-img class="proyecto-imagen" :src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE-2.jpg`)" alt="Imagen-Proyecto-Altitude"></b-img>
@@ -20,14 +20,14 @@
                       </div>
                       <div class="slide">
                         <span class="Modal-Titulo">Superficie</span>
-                        <p> 600.00 metros cuadrados</p>
+                        <p> 600 metros cuadrados</p>
                       </div>
                     </div>
                   </div>
                 <!--Desplazador (Fin)-->
                 </div>
             </div>
-        </b-container>
+        </div>
       </div>
    </div>
 </template>
@@ -63,6 +63,8 @@ export default {
   display: block !important;
   position: fixed; /* Stay in place */
   transition: all 1s ease;
+  animation: suave 1s forwards;
+
 }
 
 .modal{
@@ -74,6 +76,7 @@ export default {
  /* Black w/ opacity */
   background-color: rgba(35, 38, 58, 0.705);
 }
+
 .contenido .proyecto-imagen{
   display: block;
   align-content: center;
@@ -86,10 +89,10 @@ export default {
 .contenido{
   margin-left: auto;
   margin-right: auto;
-  min-height: 100vh;
+  margin-top: 3vh;
+  min-height: 80vh;
   /*background: -webkit-linear-gradient(#212121,rgb(59, 59, 59));*/
   background-color: white;
-  max-width: 100vw;
   border-style: solid;
 }
 .contenido .proyecto-texto{
@@ -157,8 +160,6 @@ export default {
   }
 }
 
-
-
 #slider,  #slider .slide{
   width: 60vw;
   height: 150px;
@@ -177,8 +178,7 @@ export default {
   width: 350%; /* Tiene que ser lo bastante grande como para todos los mensajes*/
   top: 0;
   right: 0;
-  animation: slide-animation 5s infinite; /*Aqui se aplica la animacion, nombre, duracion, Propiedad al acabar (infinite = loop)*/
-  background-color:red;
+  animation: slide-animation 10s infinite; /*Aqui se aplica la animacion, nombre, duracion, Propiedad al acabar (infinite = loop)*/
 }
 #slider .slide {
   position: relative;
@@ -196,9 +196,8 @@ export default {
 @media (min-width: 993px) and (orientation: landscape){
   .contenido{
     max-width: 60vw;
+    max-height: 80vh;
     width: 900px;
-    height: 900px;
-    background-color:blue;
   }
   #slider{
     width:100%;
@@ -214,6 +213,7 @@ export default {
     width: 100%;
     padding: 0;
   }
+
 }
 
 @keyframes slide-animation {/*Aqui se define la animacion*/
@@ -235,6 +235,15 @@ export default {
 }
   100%{ right:200%;
     opacity:0;
+  }
+}
+
+@keyframes suave {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }
 </style>

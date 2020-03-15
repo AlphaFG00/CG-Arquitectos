@@ -1,11 +1,11 @@
 <template>
   <div class="servicios">
-    <b-container class="view-servicios">
+    <b-container id="view-servicios">
     <!--Estructura para el efecto del titulo INICIO-->
       <div class="Titulo-Cuerpo">
-        <div class="titulo-letra">Nuestros</div>
+        <div class="titulo-letra">Nosotros te</div>
         <div class="titulo-restante">
-          <span>Servicios</span>
+          <span>Ayudamos</span>
         </div>
       </div>
     <!--Estructura para el efecto del titulo INICIO-->
@@ -49,20 +49,32 @@
 
 <style scoped>
 /*CSS para la estructura del efecto del titulo de la vista INICIO*/
-  .view-servicios{
+.servicio{
+    width: auto;
+    min-height: 100vh;
+    padding-bottom: 10px;
+  }
+  #view-servicios{
+    background-color:transparent;
     text-align: center;
   }
-
-  .Titulo-cuerpo{
+  .Titulo-Cuerpo{
   display: inline-block;
+  width: 60vw;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000;
   perspective: 1000;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  border-width: 4px;
+  border-bottom:double rgb(219, 196, 132);
+  border-top:double rgb(219, 196, 132);
+  animation-duration: 1s;
+  animation-name: slideinright;
+  margin-top: 15px;
+  margin-bottom: 10px;
   }
-
   .titulo-letra, .titulo-restante{
     display: inline-block;
     overflow: hidden;
@@ -76,14 +88,14 @@
 
   .titulo-restante{
     width: 0px;
-    animation: reveal 5s forwards;
+    animation: reveal 5s .4s forwards;
   }
 
   .titulo-restante span{
     margin-left: -100px;
-    animation: slidein 5s forwards;
+    animation: slidein 5s .4s forwards;
   }
-/*CSS para la estructura del efecto del titulo de la vista FIN*/
+
 @keyframes showup {
   0% {
     opacity: 0;
@@ -126,16 +138,27 @@
     width: 0px;
   }
   25% {
-    width: 150px;
+    width: 170px;
   }
   80% {
     opacity: 1;
   }
   100% {
     opacity: 1;
-    width: 150px;
+    width: 170px;
   }
 }
+
+@keyframes slideinright {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 /*CSS para el texto simple que Aparece INICIO*/
 .texto-servicios{
   text-align: left;/*correccion del texto centrado de view-servicios*/

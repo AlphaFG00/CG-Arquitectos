@@ -2,9 +2,9 @@
   <div class="quienes">
     <b-container id="view-quienes">
       <div class="Titulo-Cuerpo">
-        <div class="titulo-letra">Nuestros</div>
+        <div class="titulo-letra">Garca</div>
         <div class="titulo-restante">
-          <span>Proyectos</span>
+          <span>Desarrollos</span>
         </div>
       </div>
     </b-container>
@@ -43,6 +43,8 @@ export default {
   border-top:double rgb(219, 196, 132);
   animation-duration: 1s;
   animation-name: slideinright;
+  margin-top: 15px;
+  margin-bottom: 10px;
   }
 
   .titulo-letra, .titulo-restante{
@@ -108,18 +110,27 @@ export default {
     width: 0px;
   }
   25% {
-    width: 150px;
+    width: 170px;
   }
   80% {
     opacity: 1;
   }
   100% {
     opacity: 1;
-    width: 150px;
+    width: 170px;
   }
 }
 
-
+@keyframes slideinright {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 
 
 </style>

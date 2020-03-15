@@ -1,7 +1,9 @@
 <template>
   <div class="home">
-    <b-container>
-      <p class="titulo-proyectos">Bienvenido</p>
+    <b-container id="view-inicio">
+      <div class="Titulo-Cuerpo">
+        <div class="titulo-letra">Bienvenido</div>
+      </div>
     </b-container>
   </div>
 </template>
@@ -20,20 +22,50 @@ export default {
 </script>
 
 <style scoped>
-.titulo-proyectos{
-    color: lightgray;
+.home{
+    width: auto;
+    min-height: 100vh;
+    padding-bottom: 10px;
+}
+
+  #view-inicio{
+    background-color:transparent;
     text-align: center;
+  }
+
+  .Titulo-Cuerpo{
+  display: inline-block;
+  width: 60vw;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  border-width: 4px;
+  border-bottom:double rgb(219, 196, 132);
+  border-top:double rgb(219, 196, 132);
+  animation: showup 1.5s;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  }
+
+.titulo-letra, .titulo-restante{
+    display: inline-block;
+    overflow: hidden;
+    color: #A37e2c;
     font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif !important;
     font-size: 2em;
-    animation-duration: 1s;
-    animation-name: slideinright;
-    background-color: transparent;
-    border-width: 4px;
-    border-bottom:double rgb(219, 196, 132);
-    border-top:double rgb(219, 196, 132);
-/*    border-left-color: rgb(221, 204, 158);*/
-  } 
-.home{
+  }
 
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
+
+
 </style>

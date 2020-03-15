@@ -32,6 +32,7 @@ export default {
     background-color:transparent;
     text-align: center;
   }
+
   .Titulo-Cuerpo{
   display: inline-block;
   width: 60vw;
@@ -46,6 +47,9 @@ export default {
   border-top:double rgb(219, 196, 132);
   animation-duration: 1s;
   animation-name: slideinright;
+  margin-top: 15px;
+  margin-bottom: 10px;
+
   }
 
   .titulo-letra, .titulo-restante{
