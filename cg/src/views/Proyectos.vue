@@ -32,14 +32,20 @@ export default {
     background-color:transparent;
     text-align: center;
   }
-  .Titulo-cuerpo{
+  .Titulo-Cuerpo{
   display: inline-block;
+  width: 60vw;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000;
   perspective: 1000;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  border-width: 4px;
+  border-bottom:double rgb(219, 196, 132);
+  border-top:double rgb(219, 196, 132);
+  animation-duration: 1s;
+  animation-name: slideinright;
   }
 
   .titulo-letra, .titulo-restante{
@@ -55,12 +61,12 @@ export default {
 
   .titulo-restante{
     width: 0px;
-    animation: reveal 5s forwards;
+    animation: reveal 5s .4s forwards;
   }
 
   .titulo-restante span{
     margin-left: -100px;
-    animation: slidein 5s forwards;
+    animation: slidein 5s .4s forwards;
   }
 
 @keyframes showup {
@@ -123,17 +129,6 @@ export default {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
  .titulo-proyectos{
     display: block;
     text-align: center;
@@ -145,7 +140,7 @@ export default {
     white-space: nowrap;
     animation-duration: 3s;
     animation-name: Aparicion-titulo;
-    background-color: transparent;
+    background-color: red;
 /*    background: linear-gradient(180deg, rgb(255, 255, 255)30%,rgb(238, 237, 237)60%,rgb(255, 255, 255)90%);*/
     border-width: 4px;
     border-bottom:double rgb(219, 196, 132);
@@ -172,4 +167,15 @@ export default {
     }
   }
 
+
+  @keyframes slideinright {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 </style>

@@ -7,16 +7,24 @@
             <b-img class="proyecto-imagen" :src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE-2.jpg`)" alt="Imagen-Proyecto-Altitude"></b-img>
             <div class="proyecto-texto">
                 <div class="cuadro">
-                    <h5 class="Modal-Titulo">Descripción</h5>
-                    <p>Diseño y construcción para adecuacion de 2 pisos para departamentos.</p>
-                </div>
-                <div class="cuadro">
-                    <h5 class="Modal-Titulo">Ubicación</h5>
-                    <p>Zapopan,Jalisco. </p>
-                </div>
-                <div class="cuadro">
-                    <h5 class="Modal-Titulo">Superficie</h5>
-                    <p> 600.00 metros cuadrados</p>
+                <!--Desplazador (Inicio)-->
+                  <div id="slider">
+                    <div class="contenido2">
+                      <div class="slide">
+                        <span class="Modal-Titulo">Descripción</span>
+                        <p>Diseño y construcción para adecuacion de 2 pisos para departamentos.</p>
+                      </div>
+                      <div class="slide">
+                        <span class="Modal-Titulo">Ubicación</span>
+                        <p>Zapopan,Jalisco. </p>
+                      </div>
+                      <div class="slide">
+                        <span class="Modal-Titulo">Superficie</span>
+                        <p> 600.00 metros cuadrados</p>
+                      </div>
+                    </div>
+                  </div>
+                <!--Desplazador (Fin)-->
                 </div>
             </div>
         </b-container>
@@ -107,15 +115,16 @@ export default {
   display: float;
   color: black;
   background-color:transparent;
-  /*background-color: white;*/
   width: 100%;
+  padding-right: 15vw;
+  padding-left:15vw;
   float: right;
   border-top: double rgb(194, 158, 68) 5px;
+  border-bottom: double rgb(194, 158, 68) 5px;
 }
 
 .cuadro p{
   margin-bottom: 0;
-  margin-right: 0;
   margin-top: 0;
 }
 
@@ -148,6 +157,35 @@ export default {
   }
 }
 
+
+
+#slider,  #slider .slide{
+  width: 60vw;
+  height: 150px;
+}
+#slider {
+  overflow: hidden;
+  margin: 0;
+  font-size: 1.2em;
+  color: #A37e2c;
+  background-color: transparent;
+  border-radius: 50px;
+}
+
+#slider .contenido2 {
+  position: relative;
+  width: 350%; /* Tiene que ser lo bastante grande como para todos los mensajes*/
+  top: 0;
+  right: 0;
+  animation: slide-animation 5s infinite; /*Aqui se aplica la animacion, nombre, duracion, Propiedad al acabar (infinite = loop)*/
+  background-color:red;
+}
+#slider .slide {
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+}
+
 @media (min-width: 0px) and (max-width: 992px) and (orientation: landscape){
   .contenido{
     min-width:90vw;
@@ -157,8 +195,46 @@ export default {
 
 @media (min-width: 993px) and (orientation: landscape){
   .contenido{
-    max-width: 70vw;
+    max-width: 60vw;
     width: 900px;
+    height: 900px;
+    background-color:blue;
+  }
+  #slider{
+    width:100%;
+    height: 150px;
+  }
+  .slide{
+    padding:0;
+    width:28.9% !important;
+  }
+  .cuadro{
+    display:float;
+    right:0;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@keyframes slide-animation {/*Aqui se define la animacion*/
+  0% { 
+    opacity: 0;
+    right: 0;
+  }
+  5% {
+    opacity: 1;
+    right: 0; 
+  }
+  29% { right: 0;}
+  39% { right: 100%;}
+  62% { right: 100%;}
+  72% { right: 200%;}
+  95%{
+    right:200%;
+    opacity:1;
+}
+  100%{ right:200%;
+    opacity:0;
   }
 }
 </style>

@@ -1,15 +1,17 @@
 <template>
-  <div class="about">
+  <div class="servicios">
     <b-container class="view-servicios">
+    <!--Estructura para el efecto del titulo INICIO-->
       <div class="Titulo-Cuerpo">
         <div class="titulo-letra">Nuestros</div>
         <div class="titulo-restante">
           <span>Servicios</span>
         </div>
       </div>
+    <!--Estructura para el efecto del titulo INICIO-->
       <div class="texto-servicios">
       <p class="texto-explicativo">Ofrecemos a nuestros clientes una solución a sus problemas, creando esa empatía para vivir junto a el la experiencia de crecer y hacer realidad sus sueños.</p>
-
+<!--Estructura para el efecto de textos desplazados "slider" INICIO-->
         <div id="slider">
           <div class="contenido">
             <div class="slide">
@@ -39,16 +41,18 @@
             </div>
           </div>
         </div>
-
+<!--Estructura para el efecto de textos desplazados "slider" FIN-->
       </div>
     </b-container>
   </div>
 </template>
 
 <style scoped>
+/*CSS para la estructura del efecto del titulo de la vista INICIO*/
   .view-servicios{
     text-align: center;
   }
+
   .Titulo-cuerpo{
   display: inline-block;
   -webkit-backface-visibility: hidden;
@@ -79,7 +83,7 @@
     margin-left: -100px;
     animation: slidein 5s forwards;
   }
-
+/*CSS para la estructura del efecto del titulo de la vista FIN*/
 @keyframes showup {
   0% {
     opacity: 0;
@@ -132,9 +136,9 @@
     width: 150px;
   }
 }
-
+/*CSS para el texto simple que Aparece INICIO*/
 .texto-servicios{
-  text-align: left;
+  text-align: left;/*correccion del texto centrado de view-servicios*/
 }
 .texto-explicativo{
   display: block;
@@ -156,9 +160,9 @@
     opacity: 1;
   }
 }
-/*css listas slider*/
+/*CSS para el texto simple que Aparece FIN*/
 
-
+/*CSS para la estructura slider*/
 #slider,  #slider .slide{
   width: 750px;
   height: 45px;
@@ -171,16 +175,13 @@
   background-color: transparent;
   border-radius: 50px;
 }
-#slider :hover{
-  background-color: lightgray;
-}
 
 #slider .contenido {
   position: relative;
-  width: 9000px; /* Assign an insanely large width */
+  width: 9000px; /* Tiene que ser lo bastante grande como para todos los mensajes*/
   top: 0;
   right: 0;
-  animation: slide-animation 25s infinite;
+  animation: slide-animation 25s infinite; /*Aqui se aplica la animacion, nombre, duracion, Propiedad al acabar (infinite = loop)*/
 }
 #slider .slide {
   position: relative;
@@ -189,9 +190,7 @@
   padding: 10px 20px;
 }
 
-
-
-@keyframes slide-animation {
+@keyframes slide-animation {/*Aqui se define la animacion*/
   0% { 
     opacity: 0;
     right: 0;
@@ -215,4 +214,5 @@
     right: 400%;
   }
 }
+/*CSS para la estructura slider FIN*/
 </style>

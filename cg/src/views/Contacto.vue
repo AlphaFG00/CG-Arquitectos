@@ -1,8 +1,14 @@
 <template>
-  <div class="proyectos">
-    <b-container id="view-proyectos">
-      <p class="titulo-proyectos">Comunicate con Nosotros</p>
-        <ListaProyectos class="list-animation"/>
+  <div class="Contacto">
+    <b-container id="view-contacto">
+    <!--Estructura para el efecto del titulo INICIO-->
+      <div class="Titulo-Cuerpo">
+        <div class="titulo-letra">Nuestros</div>
+        <div class="titulo-restante">
+          <span>Servicios</span>
+        </div>
+      </div>
+    <!--Estructura para el efecto del titulo INICIO-->
     </b-container>
   </div>
 </template>
@@ -18,17 +24,17 @@ export default {
 </script>
 
 <style scoped>
-  .proyectos{
+  .Contacto{
     width: auto;
     min-height: 100vh;
     border-color: black;
     background-color: #212121;
     padding-bottom: 10px;
   }
-  #view-proyectos{
+  #view-contacto{
     background-color:transparent;
   }
-  #view-proyectos .titulo-proyectos{
+  #view-contacto .titulo-contacto{
     color: lightgray;
     text-align: center;
     font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif !important;
@@ -40,11 +46,6 @@ export default {
     border-bottom:double rgb(219, 196, 132);
     border-top:double rgb(219, 196, 132);
 /*    border-left-color: rgb(221, 204, 158);*/
-  }
-
-  .list-animation{
-    animation-duration: 1.2s;
-    animation-name: slideinleft;
   }
 
   @keyframes slideinright {
