@@ -3,9 +3,9 @@
     <b-container id="view-servicios">
     <!--Estructura para el efecto del titulo INICIO-->
       <div class="Titulo-Cuerpo">
-        <div class="titulo-letra">Nosotros te</div>
+        <div class="titulo-letra">Nosotros</div>
         <div class="titulo-restante">
-          <span>Ayudamos</span>
+          <pre><span>te ayudamos</span></pre>
         </div>
       </div>
     <!--Estructura para el efecto del titulo INICIO-->
@@ -82,6 +82,14 @@
     font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif !important;
     font-size: 2em;
   }
+  .Titulo-Cuerpo pre{ /*texto demaciado grande, se nesecita pre para evitar modificaciones de html*/
+    margin: 0;
+    padding:0;
+    font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif !important;
+    color: #A37e2c;
+    overflow: hidden;
+    font-size: 1em;
+  }
   .titulo-letra{
     animation: showup 5s forwards;
   }
@@ -95,6 +103,7 @@
     margin-left: -100px;
     animation: slidein 5s .4s forwards;
   }
+
 
 @keyframes showup {
   0% {
@@ -138,14 +147,14 @@
     width: 0px;
   }
   25% {
-    width: 170px;
+    width: 200px;
   }
   80% {
     opacity: 1;
   }
   100% {
     opacity: 1;
-    width: 170px;
+    width: 200px;
   }
 }
 

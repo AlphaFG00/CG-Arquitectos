@@ -4,7 +4,7 @@
       <div class="Titulo-Cuerpo">
         <div class="titulo-letra">De los planos....</div>
         <div class="titulo-restante">
-          <pre><span>a la realidad</span></pre>
+          <pre><span>A la realidad</span></pre>
         </div>
       </div>
         <ListaProyectos class="list-animation"/>
@@ -32,7 +32,6 @@ export default {
     background-color:transparent;
     text-align: center;
   }
-
   .Titulo-Cuerpo{
   display: inline-block;
   width: 60vw;
@@ -49,9 +48,7 @@ export default {
   animation-name: slideinright;
   margin-top: 15px;
   margin-bottom: 10px;
-
   }
-
   .titulo-letra, .titulo-restante{
     display: inline-block;
     overflow: hidden;
@@ -65,6 +62,7 @@ export default {
     font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif !important;
     color: #A37e2c;
     overflow: hidden;
+    font-size: 1em;
   }
   .titulo-letra{
     animation: showup 5s forwards;
@@ -122,14 +120,14 @@ export default {
     width: 0px;
   }
   25% {
-    width: 170px;
+    width: 180px;
   }
   80% {
     opacity: 1;
   }
   100% {
     opacity: 1;
-    width: 170px;
+    width: 180px;
   }
 }
 

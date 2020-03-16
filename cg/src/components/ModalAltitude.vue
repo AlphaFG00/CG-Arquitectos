@@ -1,35 +1,26 @@
 <template>
     <div class="Modal-Altitude">
       <div class="modal" id="myModal" ref="myModal">
-
-
         <div class="contenido">
             <span class="cerrar" ref="myClose">&times;</span>
             <h2>{{proyectTitle}}</h2>
-         <!--   <b-img class="proyecto-imagen" :src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE-2.jpg`)" alt="Imagen-Proyecto-Altitude"></b-img> -->
-
-
-
-
-
-  <div class="proyecto-imagen">
-    <b-carousel
-      id="carousel-1"
-      v-model="slide"
-      :interval="4000"
-      controls
-      indicators
-      img-width="1024"
-      img-height="480"
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
-    >
-      <b-carousel-slide :img-src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE-2.jpg`)"></b-carousel-slide>
-      <b-carousel-slide :img-src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE 1.jpg`)"></b-carousel-slide>
-      <b-carousel-slide :img-src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE 4.jpg`)"></b-carousel-slide>
-      <b-carousel-slide :img-src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE 5.jpg`)"></b-carousel-slide>
-    </b-carousel>
-  </div>
+            <!--Carrusel-->
+            <div class="proyecto-imagen">
+              <b-carousel
+                id="carousel-1"
+                v-model="slide"
+                :interval="4000"
+                controls
+                indicators
+                @sliding-start="onSlideStart"
+                @sliding-end="onSlideEnd">
+                <!--Imagenes para el carrusel, deben tener mas o menos la misma escala (alto es Xveces el ancho) independientemente del tamaño-->
+                <b-carousel-slide :img-src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE-2.jpg`)"></b-carousel-slide>
+                <b-carousel-slide :img-src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE 1.jpg`)"></b-carousel-slide>
+                <b-carousel-slide :img-src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE 4.jpg`)"></b-carousel-slide>
+                <b-carousel-slide :img-src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE 5.jpg`)"></b-carousel-slide>
+              </b-carousel>
+            </div>
             <div class="proyecto-texto">
                 <div class="cuadro">
                 <!--Desplazador (Inicio)-->
@@ -37,8 +28,7 @@
                     <div class="contenido2">
                       <div class="slidet">
                         <span class="Slider-Titulo">Descripción</span>
-                        <!--<p>Diseño y construcción para adecuacion de 2 pisos para departamentos.</p>-->
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In non tempore accusamus rerum optio. Illo assumenda suscipit quia doloremque fugiat corporis debitis doloribus voluptatem ab ratione in, pariatur autem nemo.</p>
+                        <p>Diseño y construcción para adecuacion de 2 pisos para departamentos.</p>
                       </div>
                       <div class="slidet">
                         <span class="Slider-Titulo">Ubicación</span>
@@ -78,8 +68,11 @@ export default {
    mounted(){
     var modal = this.$refs.myModal;
     var span = this.$refs.myClose;
+    var quitar = 
     span.onclick = function() {
-       modal.classList.remove("show-modal");
+      modal.classList.remove("show-modal");
+      modal.classList.add("bye-modal");
+      setTimeout(function(){modal.classList.remove("bye-modal")}, 500);
     }
    },
    methods: {
@@ -94,14 +87,19 @@ export default {
 </script>
 
 <style scoped>
-/*css de la ventana de proyecto*/
+/*Css para la trancision de las ventanas INICIO*/
 .show-modal{
   display: block !important;
   position: fixed; 
   transition: all 1s ease;
   animation: suave 1s forwards; /*animacion de aparicion suave*/
 }
-
+.bye-modal{
+  display: block !important;
+  position: fixed;
+  transition: all 1s ease;
+  animation: suave-inverso 1s forwards; /*animacion de desaparicion suave*/
+}
 .modal{
   z-index: 10; /* Manda al frente de toda la paguina el modal */
   padding: 0;
@@ -110,20 +108,28 @@ export default {
   overflow: auto;
   background-color: rgba(35, 38, 58, 0.705); /*Efecto oscuro transparente de fondo*/
 }
+@keyframes suave {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 
-/*.contenido .proyecto-imagen{
-  display: block;
-  align-content: center;
-  max-width: 90%;
-  max-height: 40vh;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 1vh;
-}*/
+@keyframes suave-inverso {
+  0%{
+    opacity: 1 ;
+  }
+  100%{
+    opacity: 0 ;
+  }
+}
+/*Css de trancisiones para aparecer y desaparecer FIN*/
 .contenido .proyecto-imagen{
   display: inline-block;
   margin-top: 5vh;;
-  width:45%;
+  width:60%;
 }
 .contenido{
   margin-left: auto;
@@ -143,7 +149,7 @@ export default {
   font-weight: bold;
   margin-right: 4px;
 }
-.cerrar:hover,
+.cerrar:hover, /*Animacion del icono de cierre al pasar el puntero o dar click*/
 .cerrar:focus {
   color:  #801919;;
   text-decoration: none;
@@ -160,8 +166,6 @@ export default {
   padding-right: 15vw;
   padding-left:15vw;
   float: right;
-/*  border-top: double rgb(194, 158, 68) 5px;
-  border-bottom: double rgb(194, 158, 68) 5px;*/
 }
 
 .cuadro p{
@@ -191,7 +195,7 @@ export default {
 
 #slidert,  #slidert .slidet{
   width: 60vw;
-  height: 170px;
+  height: 200px;
 }
 #slidert {
   overflow: hidden;
@@ -230,7 +234,7 @@ export default {
     max-height: 80vh; 
     width: 95vw;
     min-height: 70vh;
-    padding-top: 0vh;
+    padding-top: 0vh; /*Dimensiones del nav*/
   }
   .modal h2{ /*Formato del titulo del modal*/
     text-align: center;
@@ -246,7 +250,11 @@ export default {
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
   }
-
+  .contenido .proyecto-imagen{/*Dimenciones de la imagen*/
+    display: inline-block;/*Obligar a estar en una linea de bloque*/
+    margin-top: 5vh;
+    width:45%; /*ancho de las imagenes*/
+  }
   .cerrar{ /*icono de cerrar*/
     color: #858383;
     float: right;
@@ -263,8 +271,8 @@ export default {
     max-width: 48%;  /*Compartir la mitad del tamaño 48% + 2%*/
     margin-top: 5vh; /*Espacio alejado del titulo*/
   }
-
-  #slidert{
+/*Css para Slider de texto inicio*/
+  #slidert{ 
     width:95%;
     height: 300px;
     border-left: double 5px;
@@ -282,8 +290,8 @@ export default {
     width: 100%;
     padding: 0;
   }
-
 }
+
 @keyframes slide-animation {/*Aqui se define la animacion*/
   0% { 
     opacity: 0;
@@ -305,13 +313,5 @@ export default {
     opacity:0;
   }
 }
-
-@keyframes suave {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
+/*Css para Slider de texto fin*/
 </style>

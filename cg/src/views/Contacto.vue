@@ -3,9 +3,9 @@
     <b-container id="view-contacto">
     <!--Estructura para el efecto del titulo INICIO-->
       <div class="Titulo-Cuerpo">
-        <div class="titulo-letra">Conectate con</div>
+        <div class="titulo-letra">Conectate</div>
         <div class="titulo-restante">
-          <span>nosotros</span>
+          <pre><span>con Nosotros</span></pre>
         </div>
       </div>
     <!--Estructura para el efecto del titulo INICIO-->
@@ -51,7 +51,14 @@ export default {
   margin-bottom: 10px;
 
   }
-
+  .Titulo-Cuerpo pre{ /*texto demaciado grande, se nesecita pre para evitar modificaciones de html*/
+    margin: 0;
+    padding:0;
+    font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif !important;
+    color: #A37e2c;
+    overflow: hidden;
+    font-size: 1em;
+  }
   .titulo-letra, .titulo-restante{
     display: inline-block;
     overflow: hidden;
@@ -115,14 +122,14 @@ export default {
     width: 0px;
   }
   25% {
-    width: 148px;
+    width: 200px;
   }
   80% {
     opacity: 1;
   }
   100% {
     opacity: 1;
-    width: 148px;
+    width: 200px;
   }
 }
   @keyframes slideinright {
