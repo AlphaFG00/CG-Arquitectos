@@ -6,22 +6,43 @@
         <div class="contenido">
             <span class="cerrar" ref="myClose">&times;</span>
             <h2>{{proyectTitle}}</h2>
-            <b-img class="proyecto-imagen" :src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE-2.jpg`)" alt="Imagen-Proyecto-Altitude"></b-img>
+         <!--   <b-img class="proyecto-imagen" :src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE-2.jpg`)" alt="Imagen-Proyecto-Altitude"></b-img> -->
+
+
+
+
+
+  <div class="proyecto-imagen">
+    <b-carousel
+      id="carousel-1"
+      v-model="slide"
+      :interval="4000"
+      controls
+      indicators
+      img-width="1024"
+      img-height="480"
+      @sliding-start="onSlideStart"
+      @sliding-end="onSlideEnd"
+    >
+      <b-carousel-slide :img-src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE-2.jpg`)"></b-carousel-slide>
+      <b-carousel-slide :img-src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE 1.jpg`)"></b-carousel-slide>
+      <b-carousel-slide :img-src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE 4.jpg`)"></b-carousel-slide>
+      <b-carousel-slide :img-src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE 5.jpg`)"></b-carousel-slide>
+    </b-carousel>
+  </div>
             <div class="proyecto-texto">
                 <div class="cuadro">
                 <!--Desplazador (Inicio)-->
-                  <div id="slider">
+                  <div id="slidert">
                     <div class="contenido2">
-                      <div class="slide">
+                      <div class="slidet">
                         <span class="Slider-Titulo">Descripción</span>
                         <!--<p>Diseño y construcción para adecuacion de 2 pisos para departamentos.</p>-->
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In non tempore accusamus rerum optio. Illo assumenda suscipit quia doloremque fugiat corporis debitis doloribus voluptatem ab ratione in, pariatur autem nemo.</p>
                       </div>
-                      <div class="slide">
+                      <div class="slidet">
                         <span class="Slider-Titulo">Ubicación</span>
                         <p>Zapopan,Jalisco. </p>
-                      </div>
-                      <div class="slide">
                         <span class="Slider-Titulo">Superficie</span>
                         <p> 600 metros cuadrados</p>
                       </div>
@@ -49,7 +70,9 @@ export default {
    data(){
         return {
           myModal: [],
-          myClose: []
+          myClose: [],
+          slide: 0,
+          sliding: null
         }
    },
    mounted(){
@@ -58,7 +81,15 @@ export default {
     span.onclick = function() {
        modal.classList.remove("show-modal");
     }
-   }
+   },
+   methods: {
+     onSlideStart(slide) {
+      this.sliding = true
+     },
+     onSlideEnd(slide) {
+       this.sliding = false
+     }
+    }
 }
 </script>
 
@@ -80,7 +111,7 @@ export default {
   background-color: rgba(35, 38, 58, 0.705); /*Efecto oscuro transparente de fondo*/
 }
 
-.contenido .proyecto-imagen{
+/*.contenido .proyecto-imagen{
   display: block;
   align-content: center;
   max-width: 90%;
@@ -88,6 +119,11 @@ export default {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 1vh;
+}*/
+.contenido .proyecto-imagen{
+  display: inline-block;
+  margin-top: 5vh;;
+  width:45%;
 }
 .contenido{
   margin-left: auto;
@@ -153,20 +189,19 @@ export default {
   padding-bottom: 3vh;
 }
 
-#slider,  #slider .slide{
+#slidert,  #slidert .slidet{
   width: 60vw;
   height: 170px;
 }
-#slider {
+#slidert {
   overflow: hidden;
   margin: 0;
   font-size: 1.2em;
   color: #A37e2c;
   background-color: transparent;
-  border-radius: 50px;
 }
 
-#slider .contenido2 {
+#slidert .contenido2 {
   position: relative;
   width: 350%; /* Tiene que ser lo bastante grande como para todos los mensajes*/
   top: 0;
@@ -174,7 +209,7 @@ export default {
   animation: slide-animation 10s infinite; /*Aqui se aplica la animacion, nombre, duracion, Propiedad al acabar (infinite = loop)*/
 }
 
-#slider .slide {
+#slidert .slidet {
   position: relative;
   float: left;
   box-sizing: border-box;
@@ -183,8 +218,7 @@ export default {
 @media (min-width: 0px) and (max-width: 992px) and (orientation: landscape){
   .contenido{
     min-width:90vw;
-    min-height: 95vh;
-    background-color: blue;
+    min-height: 80vh;
     width: 80vw;
   }
 }
@@ -192,54 +226,55 @@ export default {
 @media (min-width: 993px) and (orientation: landscape){ /*Vista computadora*/
   .contenido{
     margin-top: 10vh;
-    max-width: 1000px;
+    max-width: 1100px;
     max-height: 80vh; 
     width: 95vw;
     min-height: 70vh;
+    padding-top: 0vh;
   }
   .modal h2{ /*Formato del titulo del modal*/
     text-align: center;
     font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif !important;
     font-size: 2.5em;
     color: rgb(12, 105, 12);
-    padding-top: 8vh;
-    padding-bottom: 1vh;
+    position: normal;
+    display: inline-block;
+    padding-top: .5vh;
+    width: 90%;
+    padding-bottom: .5vh;
+    border-bottom: double 12px #A37e2c;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
   }
 
   .cerrar{ /*icono de cerrar*/
-    color: #aaaaaa;
+    color: #858383;
     float: right;
     font-size: 50px;
     font-weight: bold;
     margin-right: 20px;
+    margin-left: 80%;
   }
-
-  .contenido .proyecto-imagen{
-    display: block; /*tratar como un bloque*/
-    float: left; /*poner a la izq del contenedor*/
-    align-content: center; /*Texto centrado*/
-    max-width: 45%;
-    max-height: 35vh;
-    margin-right:1%;/*La mitad del tamaño 48% + 1% + 4% = 50%*/
-    margin-left:4%;
-    margin-top: 5vh;/*Espacio alejado del titulo*/
-  }
+ 
   .proyecto-texto{
     display: block; /*Tratar como un bloque*/
     float: right; /*poner a la derecha del contenedor*/
     margin-right:2%;
     max-width: 48%;  /*Compartir la mitad del tamaño 48% + 2%*/
-    margin-top: 10vh; /*Espacio alejado del titulo*/
+    margin-top: 5vh; /*Espacio alejado del titulo*/
   }
 
-  #slider{
-    width:100%;
-    height: 200px;
+  #slidert{
+    width:95%;
+    height: 300px;
+    border-left: double 5px;
+    margin-left: 1vw;
+    padding-left: 1vw;
   }
-  .slide{
-    padding:0;
-    width:28.6% !important;
-    height: 200px !important;
+  .slidet{
+    padding-top:25px;
+    width:27% !important;
+    height: 300px !important;
   }
   .cuadro{
     display:float;
@@ -259,14 +294,14 @@ export default {
     right: 0; 
   }
   29% { right: 0;}
-  39% { right: 100%;}
+  39% { right: 0%;}
   62% { right: 100%;}
-  72% { right: 200%;}
+  72% { right: 100%;}
   95%{
-    right:200%;
+    right:100%;
     opacity:1;
 }
-  100%{ right:200%;
+  100%{ right:100%;
     opacity:0;
   }
 }

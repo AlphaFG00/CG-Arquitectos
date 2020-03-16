@@ -2,9 +2,9 @@
   <div class="proyectos">
     <b-container id="view-proyectos">
       <div class="Titulo-Cuerpo">
-        <div class="titulo-letra">Nuestros</div>
+        <div class="titulo-letra">De los planos....</div>
         <div class="titulo-restante">
-          <span>Proyectos</span>
+          <pre><span>a la realidad</span></pre>
         </div>
       </div>
         <ListaProyectos class="list-animation"/>
@@ -58,6 +58,13 @@ export default {
     color: #A37e2c;
     font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif !important;
     font-size: 2em;
+  }
+  .Titulo-Cuerpo pre{ /*texto demaciado grande, se nesecita pre para evitar modificaciones de html*/
+    margin: 0;
+    padding:0;
+    font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif !important;
+    color: #A37e2c;
+    overflow: hidden;
   }
   .titulo-letra{
     animation: showup 5s forwards;
@@ -115,14 +122,14 @@ export default {
     width: 0px;
   }
   25% {
-    width: 150px;
+    width: 170px;
   }
   80% {
     opacity: 1;
   }
   100% {
     opacity: 1;
-    width: 150px;
+    width: 170px;
   }
 }
 
@@ -144,7 +151,6 @@ export default {
     white-space: nowrap;
     animation-duration: 3s;
     animation-name: Aparicion-titulo;
-    background-color: red;
 /*    background: linear-gradient(180deg, rgb(255, 255, 255)30%,rgb(238, 237, 237)60%,rgb(255, 255, 255)90%);*/
     border-width: 4px;
     border-bottom:double rgb(219, 196, 132);
