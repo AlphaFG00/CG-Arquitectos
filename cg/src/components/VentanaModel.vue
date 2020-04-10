@@ -43,7 +43,7 @@ export default {
 .show-modal{
   display: block !important;
   position: fixed; /* Stay in place */
-  z-index: 10; /* Sit on top */
+  z-index: 20; /* Sit on top */
   padding: 0;/* Location of the box */
   left: 0;
   top: 0;

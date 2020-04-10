@@ -100,7 +100,7 @@ export default {
   animation: suave-inverso 1s forwards; /*animacion de desaparicion suave*/
 }
 .modal{
-  z-index: 10; /* Manda al frente de toda la paguina el modal */
+  z-index: 20; /* Manda al frente de toda la paguina el modal */
   padding: 0;
   left: 0;
   top: 0;

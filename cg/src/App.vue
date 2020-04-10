@@ -20,6 +20,15 @@
     </b-navbar>
 
     <router-view id="nav-fix"/>
+
+    <footer class="foot-body">
+      <div class="foot-top">
+      </div>
+      <div class="foot-mid">
+      </div>
+      <div class="foot-bot">
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -28,27 +37,11 @@
     background: linear-gradient(160deg, rgb(255, 255, 255) 10%,rgb(240, 237, 237) 40%, rgb(255, 255, 255)50%);
     position: fixed;
     width: 100vw;
-    z-index: 2;
+    z-index: 15;
     border-width: .1em !important;
     border-bottom: solid;
     border-color: #A37e2c;
 }
-/*
-#nav-font-title{
-  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 1.5em;
-  font-weight: bold;
-  background: -webkit-linear-gradient(#d1ba69 50%,#69550b 10%, #b6a35f 40%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-#nav-font-sub-title{
-  background: -webkit-linear-gradient(#c9c9c1 ,#cfcfcd, #7a7a78);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size:.68em;
-}
-*/
 #nav-collapse{
       color: rgb(12, 105, 12) !important;
 }
@@ -58,7 +51,7 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 #nav-fix{
   padding-top: 5em;
   background-color: #ffffff;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 .logo-empresa{
   width: auto;
@@ -103,5 +96,33 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color: black !important;
 }
 
+.foot-body{
+  width: 100vw;
+  background-color: darkgreen;
+  height: 95px;
+  display: none;
+}
+.foot-top{
+  display: inline-block;
+  right: 0;
+  width: 34vw;
+  height: 70px;
+  background-color: red;
+}
 
+.foot-mid{
+  display: inline-block;
+  right: 0;
+  width: 32vw;
+  height: 70px;
+  background-color:blue;
+}
+
+.foot-bot{
+  display: inline-block;
+  right: 0;
+  width: 34vw;
+  height: 70px;
+  background-color: yellow;
+}
 </style>

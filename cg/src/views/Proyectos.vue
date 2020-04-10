@@ -2,7 +2,7 @@
   <div class="proyectos">
     <b-container id="view-proyectos">
       <div class="Titulo-Cuerpo">
-        <div class="titulo-letra">De los planos....</div>
+        <div class="titulo-letra"><pre>De los planos....</pre></div>
         <div class="titulo-restante">
           <pre><span>A la realidad</span></pre>
         </div>

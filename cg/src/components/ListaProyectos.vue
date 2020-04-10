@@ -1,16 +1,18 @@
 <template>
     <div class="lista-proyectos">
-        <b-carousel
-                id="carousel-1"
+      <b-carousel
+                id="CarouselProyectos"
                 v-model="slide"
                 :interval="4000"
-                controls
-                indicators
-                background="#ababab"
-                img-width="1024"
-                img-height="512"
+                background="#ffffff"
+                ref="CarouselProyectos"
                 @sliding-start="onSlideStart"
                 @sliding-end="onSlideEnd">
+        <ol id="CarouselProyectos___BV_indicators_" class="carousel-indicators Lista-color" aria-hidden="false" aria-label="Select a slide to display" aria-owns="CarouselProyectos___BV_inner_">
+          <!--Si se necesita agregar mas proyectos se hace otra paguina para el carrucel con esto:-->
+          <li role="button" id="CarouselProyectos___BV_indicator_1_" data-slide-to="0" aria-current="false" aria-label="Goto Slide 1" aria-controls="CarouselProyectos___BV_inner_" @click="setSlide(0)" :class="(slide == 0) ? 'active' : ''"></li>
+          <li role="button" id="CarouselProyectos___BV_indicator_2_" data-slide-to="1" aria-current="false" aria-label="Goto Slide 2" aria-controls="CarouselProyectos___BV_inner_" @click="setSlide(1)" :class="(slide == 1) ? 'active' : ''"></li>
+        </ol>
         <b-carousel-slide img-blank>
           <template>
             <!--Saca las imagenes y nombres de images del store-->
@@ -97,7 +99,18 @@
             </b-row>
             </template>
         </b-carousel-slide>
-        </b-carousel>
+        <a class="carousel-control-prev" href="#" role="button" aria-controls="CarouselProyectos" @click="prev()">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#" role="button" aria-controls="carouselProyectos" @click="next()">
+          <span id="correccion-izq" class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </b-carousel>
+
+
+
     <div>
         <ModalAltitude :proyectTitle="images[0].title" :ref="0"/>
         <ModalApaches :proyectTitle="images[1].title" :ref="1"/>
@@ -145,6 +158,15 @@ export default {
         },
         onSlideEnd(slide) {
           this.sliding = false
+        },
+        prev() {
+          this.$refs.CarouselProyectos.prev()
+        },
+        next() {
+          this.$refs.CarouselProyectos.next()
+        },
+        setSlide(indice) {
+          this.$refs.CarouselProyectos.setSlide(indice)
         }
     }
 }
@@ -152,10 +174,7 @@ export default {
 </script>
 
 <style scoped>
-.img-fluid{
-  display: block;
-  height: 400px;
-}
+
   /*css - tabla de proyectos */
 .contenedor {
   display: flex;
@@ -213,6 +232,45 @@ export default {
 }
 .contenedor>.thumbex>.thumbnail:hover span {
   opacity: 0;
-
 }
+/*
+.carousel-control-next-icon {
+    background-image: url(data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='%23000' width='8' height='8' viewBox='0 0 8 8'><path d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/></svg>);
+}
+*/
+
+  .Lista-color > li,
+  .carousel-control-next > span,
+  .carousel-control-prev > span{
+    filter: invert(100%) !important;
+  }
+
+@media (min-width: 0) and (max-width: 767px){
+  .carousel-item{
+    min-height: 1450px;
+    height: 1450px;
+  }
+  .contenedor>.thumbex>.thumbnail {
+    max-width: 300px;
+ }
+ .contenedor>.thumbex>.thumbnail span{
+   max-width: 65%;
+ }
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+  .carousel-item {
+    min-height: 760px !important;
+    height: 760px !important;
+  }
+ }
+
+@media (min-width: 993px) and (orientation: landscape){
+  .carousel-item {
+    min-height: 512px !important;
+    height: 66vh;
+    max-height: 600px !important;
+  }
+}
+
 </style>
