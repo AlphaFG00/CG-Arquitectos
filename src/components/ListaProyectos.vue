@@ -112,18 +112,18 @@
 
 
     <div>
-        <ModalAltitude :proyectTitle="images[0].title" :ref="0"/>
-        <ModalApaches :proyectTitle="images[1].title" :ref="1"/>
-        <ModalFinox :proyectTitle="images[2].title" :ref="2"/>
-        <ModalHuasteca :proyectTitle="images[3].title" :ref="3"/>
-        <ModalLeonDavid :proyectTitle="images[4].title" :ref="4"/>
-        <ModalLasAguilas :proyectTitle="images[5].title" :ref="5"/>
+        <BaseModal
+          v-for="(modal, index) in projects_data" :key="index" :ref="index"
+          :projectTitle="modal.projectTitle" :description="modal.description"
+          :location="modal.location" :area="modal.area" :images="modal.images"
+        />
       </div>
 </div>
 </template>
 
 <script>
 import {mapState} from 'vuex'
+import BaseModal from '@/components/BaseModal.vue'
 import ModalAltitude from '@/components/ModalAltitude.vue'
 import ModalApaches from '@/components/ModalApaches.vue'
 import ModalFinox from '@/components/ModalFinox.vue'
@@ -134,12 +134,89 @@ export default {
     name:'ListaProyectos',
     data(){
       return {
-       slide: 0,
-       sliding: null
+        slide: 0,
+        sliding: null,
+        projects_data: [
+          {
+            projectTitle: 'Altitude',
+            description: 'Diseño y construcción para adecuacion de 2 pisos para departamentos.',
+            location: 'Zapopan,Jalisco.',
+            area: '600 metros cuadrados',
+            images: [
+              'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
+            ]
+          },
+          {
+            projectTitle: 'Apaches',
+            description: 'Desarrollo Inmobiliario para un Fraccionamiento de 9 casas de nivel residencial alto, incluyendo Diseño y construcción, urbanización y comercialización.',
+            location: 'Zapopan,Jalisco. ',
+            area: '9 casas de 250 – 300 metros cuadrados',
+            images: [
+              'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
+            ]
+          },
+          {
+            projectTitle: 'Finox',
+            description: 'Diseño y construcción de edificio de oficinas para Corporativo Financiero.',
+            location: 'Zapopan,Jalisco. ',
+            area: 'Sótano + 5 pisos de oficinas con un superficie total de 1,500 metros cuadrados',
+            images: [
+              'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
+            ]
+          },
+          {
+            projectTitle: 'Huasteca',
+            description: 'Diseño y supervisión de obra.',
+            location: 'Santa Catarina, N.L.',
+            area: '300 metros cuadrados',
+            images: [
+              'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
+            ]
+          },
+          {
+            projectTitle: 'Las Aguilas',
+            description: 'Diseño para remodelación de tienda',
+            location: 'Zapopan,Jalisco. ',
+            area: '1000 metros cuadrados',
+            images: [
+              'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
+            ]
+          },
+          {
+            projectTitle: 'Leon David',
+            description: 'Diseño y construcción de casa habitación.',
+            location: 'Guadalajara, Jalisco ',
+            area: '350 metros cuadrados',
+            images: [
+              'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
+              'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
+            ]
+          }
+        ]
       }
     },
     components:{
-          ModalAltitude,ModalApaches,ModalFinox,ModalHuasteca,ModalLeonDavid,ModalLasAguilas
+          ModalAltitude, ModalApaches,
+          ModalFinox, ModalHuasteca,
+          ModalLeonDavid, ModalLasAguilas,
+          BaseModal
     },
     computed:{
         ...mapState(['images'])
@@ -150,8 +227,9 @@ export default {
             return images('./' + pet + ".jpg")
         },
         showModel(index){
-         var mod=this.$refs[index].$refs.myModal
-         mod.classList.add("show-modal");
+          console.log(this.$refs[index][0].myModal)
+          var mod=this.$refs[index][0].myModal
+          mod.classList.add("show-modal");
         },
         onSlideStart(slide) {
           this.sliding = true
