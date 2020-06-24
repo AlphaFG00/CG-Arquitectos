@@ -14,16 +14,6 @@
   </div>
 </template>
 
-<script>
-import ListaProyectos from '@/components/ListaProyectos.vue'
-export default {
-  name:"Contacto",
-  components:{
-    ListaProyectos
-  }
-}
-</script>
-
 <style scoped>
  .Contacto{
     width: auto;

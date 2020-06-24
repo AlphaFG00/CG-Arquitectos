@@ -69,7 +69,7 @@ export default {
    mounted(){
     var modal = this.$refs.myModal;
     var span = this.$refs.myClose;
-    var quitar = 
+
     span.onclick = function() {
       modal.classList.remove("show-modal");
       modal.classList.add("bye-modal");
@@ -77,10 +77,10 @@ export default {
     }
    },
    methods: {
-     onSlideStart(slide) {
+     onSlideStart() {
       this.sliding = true
      },
-     onSlideEnd(slide) {
+     onSlideEnd() {
        this.sliding = false
      }
     }

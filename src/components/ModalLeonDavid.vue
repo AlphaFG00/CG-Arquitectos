@@ -51,39 +51,38 @@
 
 <script>
 export default {
-    name:'ModalLeonDavid',
-    props:{
-      proyectTitle:{
-        type: String,
-        required: true
-      },
-   },
-   data(){
-        return {
-          myModal: [],
-          myClose: [],
-          slide: 0,
-          sliding: null
-        }
-   },
-   mounted(){
+  name:'ModalLeonDavid',
+  props:{
+    proyectTitle: {
+      type: String,
+      required: true
+    },
+  },
+  data(){
+    return {
+      myModal: [],
+      myClose: [],
+      slide: 0,
+      sliding: null
+    }
+  },
+  mounted(){
     var modal = this.$refs.myModal;
     var span = this.$refs.myClose;
-    var quitar = 
     span.onclick = function() {
       modal.classList.remove("show-modal");
       modal.classList.add("bye-modal");
       setTimeout(function(){modal.classList.remove("bye-modal")}, 500);
     }
-   },
-   methods: {
-     onSlideStart(slide) {
+  },
+  methods: {
+    onSlideStart() {
       this.sliding = true
-     },
-     onSlideEnd(slide) {
-       this.sliding = false
-     }
+    },
+    onSlideEnd() {
+      this.sliding = false
     }
+  }
 }
 </script>
 

@@ -153,10 +153,10 @@ export default {
          var mod=this.$refs[index].$refs.myModal
          mod.classList.add("show-modal");
         },
-        onSlideStart(slide) {
+        onSlideStart() {
           this.sliding = true
         },
-        onSlideEnd(slide) {
+        onSlideEnd() {
           this.sliding = false
         },
         prev() {
