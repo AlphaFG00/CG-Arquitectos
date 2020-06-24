@@ -1,13 +1,10 @@
 languaje: node_js
 node_js:
-  -11.6.0
+  - "node"
 cache: npm
-install:
-  - npm install
 
-script:
-  - npm run build
-  
+script: npm run build
+
 deploy:
   provider: pages
   skip_cleanup: true
