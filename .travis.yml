@@ -1,9 +1,8 @@
 languaje: node_js
 node_js:
-  -13.7.0
+  -11.6.0
 cache: npm
 install:
-  - nvm install 13.7.0
   - npm install
 
 script:
