@@ -4,6 +4,11 @@
       <div class="Titulo-Cuerpo">
         <div class="titulo-letra">Bienvenido</div>
       </div>
+      <div class="cuerpo-bienvenida">
+        <span class="texto-bienvenida">
+          Ofrecemos a nuestros clientes una solución a sus problemas, creando esa empatía para vivir junto a el la experiencia de crecer y hacer realidad sus sueños.
+        </span>
+      </div>
     </b-container>
   </div>
 </template>
@@ -45,14 +50,32 @@
     font-size: 2em;
   }
 
-@keyframes showup {
-  0% {
+  .cuerpo-bienvenida{
+    text-align: left !important;
+  }
+
+  .texto-bienvenida{
+    font-size: 1.5em;
     opacity: 0;
+    color:rgb(12, 52, 105);
+    animation: bienvenido 1.5s .8s forwards;
   }
-  100% {
-    opacity: 1;
+
+  @keyframes showup {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
-}
 
-
+  @keyframes bienvenido {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 100%;
+    }
+  }
 </style>

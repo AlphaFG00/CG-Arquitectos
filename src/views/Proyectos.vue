@@ -131,13 +131,6 @@ export default {
   }
 }
 
-
-
-
-
-
-
-
  .titulo-proyectos{
     display: block;
     text-align: center;
@@ -155,6 +148,7 @@ export default {
     border-top:double rgb(219, 196, 132);
 /*    box-shadow: rgb(94, 94, 128) 3px 3px 5px;*/
   }
+
   .titulo-proyectos span{
     overflow: hidden;
     white-space: nowrap;
@@ -166,6 +160,7 @@ export default {
     animation-duration: 2s;
     animation-name: Aparicion-lista;
   }
+
   @keyframes Aparicion-lista {
     0% {
       opacity: 0;

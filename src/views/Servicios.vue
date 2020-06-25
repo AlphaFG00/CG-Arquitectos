@@ -10,34 +10,33 @@
       </div>
     <!--Estructura para el efecto del titulo INICIO-->
       <div class="texto-servicios">
-      <p class="texto-explicativo">Ofrecemos a nuestros clientes una solución a sus problemas, creando esa empatía para vivir junto a el la experiencia de crecer y hacer realidad sus sueños.</p>
-<!--Estructura para el efecto de textos desplazados "slider" INICIO-->
+      <p class="texto-explicativo">Ofrecemos a nuestros clientes una solución a sus problemas, creando esa empatía para vivir junto a el la experiencia de crecer y hacer realidad sus sueños, dando nuestra experiencia y soporte en todo lo relacionado a:</p>
+    <!--Estructura para el efecto de textos desplazados "slider" INICIO-->
         <div id="slider">
           <div class="contenido">
             <div class="slide">
-              <p>
-                Diseño arquitectónico.
-              </p>
+                <h4>Diseño arquitectónico.</h4>
+                <span>Desde la conceptualización del proyecto hasta su etapa ejecutiva, ponemos nuestra experiencia y conocimiento para llegar a la mejor solución arquitectónica, estética y funcional para el cliente.</span>
             </div>
             <div class="slide">
-              <p>
-                Construcción y administración (gerencia de obra).
-              </p>
+                <h4>Construcción</h4>
+                <span>Contamos con el equipo humano para materializar tu proyecto. Somos contratistas generales para entrega de proyectos llave en mano o según la necesidad que tenga el cliente.</span>
             </div>
             <div class="slide">
-              <p>
-                Desarrollo inmobiliario.
-              </p>
+                <h4>Consultoría en administración de la construcción</h4>
+                <span>Enfocado en aquellas empresas o constructores quienes ya tengan una obra en proceso o estén por iniciar algún proyecto, le ayudamos a tener el mejor control de la misma, partiendo desde la elaboración de catálogos de conceptos, control de estimaciones, gastos, insumos, control de materiales y personal tanto en materia de operación como en el tema administrativo (IMSS, Gestorias, Cierres de obra, etc).</span>
             </div>
             <div class="slide">
-              <p>
-                Gestión Inmobiliaria.
-              </p>
+                <h4>Desarrollo inmobiliario.</h4>
+                <span>Ayudamos al cliente a sacar el máximo provecho y rentabilidad para su propiedad. Haciendo un estudio exhaustivo de mercado, vocación del predio, diseño conceptual y estudio financiero, brindamos la mejor solución para conseguir los mejores rendimientos de la tierra en cuestión. Proyectos de inversión, aportación o consultoría, estamos para servirle.</span>
             </div>
             <div class="slide">
-              <p>
-                Mantenimiento residencial, comercial e industrial.
-              </p>
+                <h4>Gestión Inmobiliaria.</h4>
+                <span>Brindamos soluciones para comercializar tu propiedad, asi como todo lo relacionado a la gestión legal y de permisos para poder hacer la compra/venta de inmuebles.</span>
+            </div>
+            <div class="slide">
+                <h4> Mantenimiento</h4>
+                <span>Contamos con un equipo profesional de mantenimiento correctivo y preventivo en todos los rubros (obra civil, electricidad, plomeria, acabados, herreria, aire acondicionado) para que tus instalaciones estén siempre en perfectas condiciones.</span>
             </div>
           </div>
         </div>
@@ -172,6 +171,7 @@
 .texto-servicios{
   text-align: left;/*correccion del texto centrado de view-servicios*/
 }
+
 .texto-explicativo{
   display: block;
   opacity: 0;
@@ -196,30 +196,41 @@
 
 /*CSS para la estructura slider*/
 #slider,  #slider .slide{
-  width: 750px;
-  height: 45px;
+  width: 80vw;
+  height: auto;
 }
 #slider {
   overflow: hidden;
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1em;
   color: #A37e2c;
   background-color: transparent;
   border-radius: 50px;
+  
 }
 
 #slider .contenido {
   position: relative;
-  width: 9000px; /* Tiene que ser lo bastante grande como para todos los mensajes*/
+  width: 480vw; /* Tiene que ser lo bastante grande como para todos los mensajes*/
   top: 0;
   right: 0;
-  animation: slide-animation 25s infinite; /*Aqui se aplica la animacion, nombre, duracion, Propiedad al acabar (infinite = loop)*/
+  animation: slide-animation 40s infinite; /*Aqui se aplica la animacion, nombre, duracion, Propiedad al acabar (infinite = loop)*/
 }
 #slider .slide {
   position: relative;
   float: left;
   box-sizing: border-box;
-  padding: 10px 20px;
+  padding: 10px 10vw 0px 10px;
+  max-width: 80vw;
+}
+
+#slider .slide h4{
+  padding-top: .5em;
+  color: rgb(12, 52, 105);
+}
+
+#slider .slide span{
+  color:rgb(9, 73, 9);
 }
 
 @keyframes slide-animation {/*Aqui se define la animacion*/
@@ -227,23 +238,25 @@
     opacity: 0;
     right: 0;
   }
-  11% {
+  8% {
     opacity: 1;
     right: 0; 
   }
-  22% { right: 100%; }
-  33% { right: 100%; }
-  44% { right: 200%; }
-  55% { right: 200%; }
-  66% { right: 300%; }
-  77% { right: 300%; }
-  88% {
+  16% { right: 100%; }
+  27% { right: 100%; }
+  32% { right: 200%; }
+  40% { right: 200%; }
+  48% { right: 300%; }
+  56% { right: 300%; }
+  64% { right: 400%; }
+  72% { right: 400%; }
+  80%{
     opacity: 1;
-    right: 400%; 
+    right: 500%; 
   }
-  100% {
+  100%{
     opacity: 0;
-    right: 400%;
+    right: 500%;
   }
 }
 /*CSS para la estructura slider FIN*/

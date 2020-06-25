@@ -6,10 +6,12 @@
         <div class="titulo-letra">Conectate</div>
         <div class="titulo-restante">
           <pre><span>con Nosotros</span></pre>
-          lala
         </div>
       </div>
-    <!--Estructura para el efecto del titulo INICIO-->
+    <!--Estructura para el efecto del titulo Final-->
+      <div class="Texto-contacto">
+
+      </div>
     </b-container>
   </div>
 </template>
