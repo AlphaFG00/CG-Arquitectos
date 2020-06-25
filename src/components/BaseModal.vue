@@ -1,89 +1,106 @@
 <template>
-    <div class="Modal-LasAguilas">
-      <div class="modal" id="myModal" ref="myModal">
-        <div class="contenido">
-            <span class="cerrar" ref="myClose">&times;</span>
-            <h2>{{proyectTitle}}</h2>
-            <!--Carrusel-->
-            <div class="proyecto-imagen">
-              <b-carousel
-                id="carousel-1"
-                v-model="slide"
-                :interval="4000"
-                controls
-                indicators
-                @sliding-start="onSlideStart"
-                @sliding-end="onSlideEnd">
-                <!--Imagenes para el carrusel, deben tener mas o menos la misma escala (alto es Xveces el ancho) independientemente del tamaño-->
-                <b-carousel-slide :img-src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE-2.jpg`)"></b-carousel-slide>
-                <b-carousel-slide :img-src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE 1.jpg`)"></b-carousel-slide>
-                <b-carousel-slide :img-src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE 4.jpg`)"></b-carousel-slide>
-                <b-carousel-slide :img-src="require(`../assets/imagenproyectos/fotosproyectos/ALTITUDE 5.jpg`)"></b-carousel-slide>
-              </b-carousel>
-            </div>
-            <!--Carrusel FIN-->
-            <div class="proyecto-texto">
-                <div class="cuadro">
-                <!--Desplazador (Inicio)-->
-                  <div id="slidert">
-                    <div class="contenido2">
-                      <div class="slidet">
-                        <span class="Slider-Titulo">Descripción</span>
-                        <p>Diseño para remodelación de tienda</p>
-                      </div>
-                      <div class="slidet">
-                        <span class="Slider-Titulo">Ubicación</span>
-                        <p>Zapopan,Jalisco. </p>
-                      </div>
-                      <div class="slidet">
-                        <span class="Slider-Titulo">Superficie</span>
-                        <p> 1000 metros cuadrados</p>
-                      </div>
-                    </div>
-                  </div>
-                <!--Desplazador (Fin)-->
+  <div class="Modal-Altitude">
+    <div :class="['modal', showing_class]">
+      <div class="contenido">
+        <span class="cerrar" @click="close()">&times;</span>
+        <h2>{{projectTitle}}</h2>
+        <!--Carrusel-->
+        <div class="proyecto-imagen">
+          <b-carousel
+            id="carousel-1"
+            v-model="slide"
+            :interval="4000"
+            controls
+            indicators
+            @sliding-start="onSlideStart"
+            @sliding-end="onSlideEnd"
+          >
+            <!--Imagenes para el carrusel, deben tener mas o menos la misma escala (alto es Xveces el ancho) independientemente del tamaño-->
+            <b-carousel-slide
+              v-for="(image, index) in images" :key="index"
+              :img-src="require('../assets/' + image)"
+            />
+          </b-carousel>
+        </div>
+        <div class="proyecto-texto">
+          <div class="cuadro">
+          <!--Desplazador (Inicio)-->
+            <div id="slidert">
+              <div class="contenido2">
+                <div class="slidet">
+                  <span class="Slider-Titulo">Descripción</span>
+                  <p>{{ description }}</p>
                 </div>
+                <div class="slidet">
+                  <span class="Slider-Titulo">Ubicación</span>
+                  <p>{{ location }}</p>
+                  <span class="Slider-Titulo">Superficie</span>
+                  <p>{{ area }}</p>
+                </div>
+              </div>
             </div>
+          <!--Desplazador (Fin)-->
+          </div>
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-    name:'ModalLasAguilas',
-    props:{
-      proyectTitle:{
-        type: String,
-        required: true
-      },
-   },
-   data(){
-        return {
-          myModal: [],
-          myClose: [],
-          slide: 0,
-          sliding: null
-        }
-   },
-   mounted(){
-    var modal = this.$refs.myModal;
-    var span = this.$refs.myClose;
-
-    span.onclick = function() {
-      modal.classList.remove("show-modal");
-      modal.classList.add("bye-modal");
-      setTimeout(function(){modal.classList.remove("bye-modal")}, 500);
+  name: 'BaseModal',
+  props:{
+    projectTitle:{
+      type: String,
+      required: true
+    },
+    description: {
+      type: String,
+      default: `Diseño y construcción para adecuacion de 2 pisos para departamentos.`
+    },
+    location: {
+      type: String,
+      default: "Zapopan,Jalisco."
+    },
+    area: {
+      type: String,
+      default: "600 metros cuadrados"
+    },
+    images: {
+      type: Array,
+      default: function () { return [
+        `imagenproyectos/fotosproyectos/ALTITUDE-2.jpg`
+      ]}
+    },
+    is_shown: {
+      type: Boolean,
+      default: false
     }
-   },
-   methods: {
-     onSlideStart() {
+  },
+  data(){
+    return {
+      slide: 0,
+      sliding: null,
+      showing_class: 'show-modal'
+    }
+  },
+  created: function () {
+    this.showing_class = this.is_shown ? 'show-modal' : '';
+  },
+  methods: {
+    close: function (){
+      this.showing_class = 'bye-modal'
+      setTimeout(function(){ this.showing_class = '' }, 500);
+      this.$emit('close', this.projectTitle)
+    },
+    onSlideStart() {
       this.sliding = true
-     },
-     onSlideEnd() {
-       this.sliding = false
-     }
+    },
+    onSlideEnd() {
+      this.sliding = false
     }
+  }
 }
 </script>
 

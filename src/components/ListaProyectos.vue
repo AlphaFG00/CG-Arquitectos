@@ -1,174 +1,188 @@
 <template>
-    <div class="lista-proyectos">
-      <b-carousel
-                id="CarouselProyectos"
-                v-model="slide"
-                :interval="4000"
-                background="#ffffff"
-                ref="CarouselProyectos"
-                @sliding-start="onSlideStart"
-                @sliding-end="onSlideEnd">
-        <ol id="CarouselProyectos___BV_indicators_" class="carousel-indicators Lista-color" aria-hidden="false" aria-label="Select a slide to display" aria-owns="CarouselProyectos___BV_inner_">
-          <!--Si se necesita agregar mas proyectos se hace otra paguina para el carrucel con esto:-->
-          <li role="button" id="CarouselProyectos___BV_indicator_1_" data-slide-to="0" aria-current="false" aria-label="Goto Slide 1" aria-controls="CarouselProyectos___BV_inner_" @click="setSlide(0)" :class="(slide == 0) ? 'active' : ''"></li>
-          <li role="button" id="CarouselProyectos___BV_indicator_2_" data-slide-to="1" aria-current="false" aria-label="Goto Slide 2" aria-controls="CarouselProyectos___BV_inner_" @click="setSlide(1)" :class="(slide == 1) ? 'active' : ''"></li>
-        </ol>
-        <b-carousel-slide img-blank>
-          <template>
-            <!--Saca las imagenes y nombres de images del store-->
-            <b-row class="contenedor">
-              <b-col cols="12" md="6" lg="4" class="thumbex">
-                <div class="thumbnail" @click="showModel(0)">
-                    <b-img fluid :src="getImgUrl(images[0].name)" :alt="images[0].name" class="img-proyecto"></b-img>
-                    <span>{{images[0].title}}</span>
-                </div>
-              </b-col>
-              <b-col cols="12" md="6" lg="4" class="thumbex">
-                <div class="thumbnail" @click="showModel(1)">
-                    <b-img fluid :src="getImgUrl(images[1].name)" :alt="images[1].name" class="img-proyecto"></b-img>
-                    <span>{{images[1].title}}</span>
-                </div>
-              </b-col>
-              <b-col cols="12" md="6" lg="4" class="thumbex">
-                <div class="thumbnail" @click="showModel(2)">
-                    <b-img fluid :src="getImgUrl(images[2].name)" :alt="images[2].name" class="img-proyecto"></b-img>
-                    <span>{{images[2].title}}</span>
-                </div>
-              </b-col>
-              <b-col cols="12" md="6" lg="4" class="thumbex">
-                <div class="thumbnail" @click="showModel(3)">
-                    <b-img fluid :src="getImgUrl(images[3].name)" :alt="images[3].name" class="img-proyecto"></b-img>
-                    <span>{{images[3].title}}</span>
-                </div>
-              </b-col>
-              <b-col cols="12" md="6" lg="4" class="thumbex">
-                <div class="thumbnail" @click="showModel(4)">
-                    <b-img fluid :src="getImgUrl(images[4].name)" :alt="images[4].name" class="img-proyecto"></b-img>
-                    <span>{{images[4].title}}</span>
-                </div>
-              </b-col>
-              <b-col cols="12" md="6" lg="4" class="thumbex">
-                <div class="thumbnail" @click="showModel(5)">
-                    <b-img fluid :src="getImgUrl(images[5].name)" :alt="images[5].name" class="img-proyecto"></b-img>
-                    <span>{{images[5].title}}</span>
-                </div>
-              </b-col>
-            </b-row>
-          </template>
-        </b-carousel-slide>
-          <!--Pack de 6-->
-        <b-carousel-slide  img-blank img-alt="Blank image">
-          <template>
-            <b-row class="contenedor">
-              <b-col cols="12" md="6" lg="4" class="thumbex">
-                <div class="thumbnail" @click="showModel(0)">
-                    <b-img fluid :src="getImgUrl(images[0].name)" :alt="images[0].name" class="img-proyecto"></b-img>
-                    <span>{{images[0].title}}</span>
-                </div>
-              </b-col>
-              <b-col cols="12" md="6" lg="4" class="thumbex">
-                <div class="thumbnail" @click="showModel(1)">
-                    <b-img fluid :src="getImgUrl(images[1].name)" :alt="images[1].name" class="img-proyecto"></b-img>
-                    <span>{{images[1].title}}</span>
-                </div>
-              </b-col>
-              <b-col cols="12" md="6" lg="4" class="thumbex">
-                <div class="thumbnail" @click="showModel(2)">
-                    <b-img fluid :src="getImgUrl(images[2].name)" :alt="images[2].name" class="img-proyecto"></b-img>
-                    <span>{{images[2].title}}</span>
-                </div>
-              </b-col>
-              <b-col cols="12" md="6" lg="4" class="thumbex">
-                <div class="thumbnail" @click="showModel(3)">
-                    <b-img fluid :src="getImgUrl(images[3].name)" :alt="images[3].name" class="img-proyecto"></b-img>
-                    <span>{{images[3].title}}</span>
-                </div>
-              </b-col>
-              <b-col cols="12" md="6" lg="4" class="thumbex">
-                <div class="thumbnail" @click="showModel(4)">
-                    <b-img fluid :src="getImgUrl(images[4].name)" :alt="images[4].name" class="img-proyecto"></b-img>
-                    <span>{{images[4].title}}</span>
-                </div>
-              </b-col>
-              <b-col cols="12" md="6" lg="4" class="thumbex">
-                <div class="thumbnail" @click="showModel(5)">
-                    <b-img fluid :src="getImgUrl(images[5].name)" :alt="images[5].name" class="img-proyecto"></b-img>
-                    <span>{{images[5].title}}</span>
-                </div>
-              </b-col>
-            </b-row>
-            </template>
-        </b-carousel-slide>
-        <a class="carousel-control-prev" href="#" role="button" aria-controls="CarouselProyectos" @click="prev()">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#" role="button" aria-controls="carouselProyectos" @click="next()">
-          <span id="correccion-izq" class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </b-carousel>
+  <div class="lista-proyectos">
 
-
+    <b-carousel
+          id="CarouselProyectos"
+          v-model="slide"
+          :interval="4000"
+          background="#ffffff"
+          ref="CarouselProyectos"
+          @sliding-start="sliding = true"
+          @sliding-end="sliding = false"
+    >
+      <ol id="CarouselProyectos___BV_indicators_" class="carousel-indicators Lista-color" aria-hidden="false" aria-label="Select a slide to display" aria-owns="CarouselProyectos___BV_inner_">
+        <!--Si se necesita agregar mas proyectos se hace otra paguina para el carrucel con esto:-->
+        <li role="button" id="CarouselProyectos___BV_indicator_1_" data-slide-to="0" aria-current="false" aria-label="Goto Slide 1" aria-controls="CarouselProyectos___BV_inner_" @click="setSlide(0)" :class="(slide == 0) ? 'active' : ''"></li>
+        <li role="button" id="CarouselProyectos___BV_indicator_2_" data-slide-to="1" aria-current="false" aria-label="Goto Slide 2" aria-controls="CarouselProyectos___BV_inner_" @click="setSlide(1)" :class="(slide == 1) ? 'active' : ''"></li>
+      </ol>
+      <b-carousel-slide img-blank>
+        <template>
+          <!--Saca las imagenes y nombres de images del store-->
+          <b-row class="contenedor">
+            <b-col cols="12" md="6" lg="4" class="thumbex" v-for="(image, index) in images" :key="index">
+              <div class="thumbnail" @click="showModel(index)">
+                <b-img fluid :src="getImgUrl(image.name)" :alt="image.name" class="img-proyecto"></b-img>
+                <span>{{image.title}}</span>
+              </div>
+            </b-col>
+          </b-row>
+        </template>
+      </b-carousel-slide>
+        <!--Pack de 6-->
+      <b-carousel-slide  img-blank img-alt="Blank image">
+        <template>
+          <b-row class="contenedor">
+            <b-col cols="12" md="6" lg="4" class="thumbex" v-for="(image, index) in images" :key="index">
+              <div class="thumbnail" @click="showModel(index)">
+                <b-img fluid :src="getImgUrl(image.name)" :alt="image.name" class="img-proyecto"></b-img>
+                <span>{{image.title}}</span>
+              </div>
+            </b-col>
+          </b-row>
+        </template>
+      </b-carousel-slide>
+      <a class="carousel-control-prev" href="#" role="button" aria-controls="CarouselProyectos" @click="prev()">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#" role="button" aria-controls="carouselProyectos" @click="next()">
+        <span id="correccion-izq" class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </b-carousel>
 
     <div>
-        <ModalAltitude :proyectTitle="images[0].title" :ref="0"/>
-        <ModalApaches :proyectTitle="images[1].title" :ref="1"/>
-        <ModalFinox :proyectTitle="images[2].title" :ref="2"/>
-        <ModalHuasteca :proyectTitle="images[3].title" :ref="3"/>
-        <ModalLeonDavid :proyectTitle="images[4].title" :ref="4"/>
-        <ModalLasAguilas :proyectTitle="images[5].title" :ref="5"/>
-      </div>
-</div>
+      <BaseModal
+        v-for="(modal, index) in projects_data" :key="modal.projectTitle" :ref="index"
+        :projectTitle="modal.projectTitle" :description="modal.description"
+        :location="modal.location" :area="modal.area" :images="modal.images"
+        :is_shown="modal.is_shown"
+        @close="onCloseModal"
+      />
+    </div>
+  </div>
 </template>
 
 <script>
-import {mapState} from 'vuex'
-import ModalAltitude from '@/components/ModalAltitude.vue'
-import ModalApaches from '@/components/ModalApaches.vue'
-import ModalFinox from '@/components/ModalFinox.vue'
-import ModalHuasteca from '@/components/ModalHuasteca.vue'
-import ModalLeonDavid from '@/components/ModalLeonDavid.vue'
-import ModalLasAguilas from '@/components/ModalLasAguilas.vue'
+import { mapState } from 'vuex'
+import BaseModal from '@/components/BaseModal.vue'
+
 export default {
-    name:'ListaProyectos',
-    data(){
-      return {
-       slide: 0,
-       sliding: null
-      }
-    },
-    components:{
-          ModalAltitude,ModalApaches,ModalFinox,ModalHuasteca,ModalLeonDavid,ModalLasAguilas
-    },
-    computed:{
-        ...mapState(['images'])
-    },
-    methods:{
-        getImgUrl(pet) {
-            var images = require.context('../assets/imagenproyectos/', false, /\.jpg$/)
-            return images('./' + pet + ".jpg")
+  name:'ListaProyectos',
+  data(){
+    return {
+      slide: 0,
+      sliding: null,
+      projects_data: [
+        {
+          projectTitle: 'Altitude',
+          description: 'Diseño y construcción para adecuacion de 2 pisos para departamentos.',
+          location: 'Zapopan,Jalisco.',
+          area: '600 metros cuadrados',
+          images: [
+            'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
+          ]
         },
-        showModel(index){
-         var mod=this.$refs[index].$refs.myModal
-         mod.classList.add("show-modal");
+        {
+          projectTitle: 'Apaches',
+          description: 'Desarrollo Inmobiliario para un Fraccionamiento de 9 casas de nivel residencial alto, incluyendo Diseño y construcción, urbanización y comercialización.',
+          location: 'Zapopan,Jalisco. ',
+          area: '9 casas de 250 – 300 metros cuadrados',
+          images: [
+            'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
+          ]
         },
-        onSlideStart() {
-          this.sliding = true
+        {
+          projectTitle: 'Finox',
+          description: 'Diseño y construcción de edificio de oficinas para Corporativo Financiero.',
+          location: 'Zapopan,Jalisco. ',
+          area: 'Sótano + 5 pisos de oficinas con un superficie total de 1,500 metros cuadrados',
+          images: [
+            'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
+          ]
         },
-        onSlideEnd() {
-          this.sliding = false
+        {
+          projectTitle: 'Huasteca',
+          description: 'Diseño y supervisión de obra.',
+          location: 'Santa Catarina, N.L.',
+          area: '300 metros cuadrados',
+          images: [
+            'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
+          ]
         },
-        prev() {
-          this.$refs.CarouselProyectos.prev()
+        {
+          projectTitle: 'Las Aguilas',
+          description: 'Diseño para remodelación de tienda',
+          location: 'Zapopan,Jalisco. ',
+          area: '1000 metros cuadrados',
+          images: [
+            'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
+          ]
         },
-        next() {
-          this.$refs.CarouselProyectos.next()
-        },
-        setSlide(indice) {
-          this.$refs.CarouselProyectos.setSlide(indice)
+        {
+          projectTitle: 'Leon David',
+          description: 'Diseño y construcción de casa habitación.',
+          location: 'Guadalajara, Jalisco ',
+          area: '350 metros cuadrados',
+          images: [
+            'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
+          ]
         }
+      ]
     }
+  },
+  components: {
+    BaseModal
+  },
+  computed: {
+    ...mapState(['images'])
+  },
+  methods: {
+    getImgUrl(pet) {
+      var images = require.context('../assets/imagenproyectos/', false, /\.jpg$/)
+      return images('./' + pet + ".jpg")
+    },
+    showModel(index){
+      this.projects_data[index].is_shown = true
+      this.reactiveModal(index)
+    },
+    reactiveModal (index) {
+      let reactive = this.projects_data[index].projectTitle
+      this.projects_data[index].projectTitle = ( reactive.slice(0, -1) != ' ' ) ? reactive + ' ' : reactive.slice(0, -1)
+    },
+    onCloseModal (value) {
+      let index = this.projects_data.findIndex(o => o.projectTitle == value)
+      this.projects_data[index].is_shown = false
+      this.reactiveModal(index)
+    },
+    prev() {
+      this.$refs.CarouselProyectos.prev()
+    },
+    next() {
+      this.$refs.CarouselProyectos.next()
+    },
+    setSlide(indice) {
+      this.$refs.CarouselProyectos.setSlide(indice)
+    }
+  }
 }
 
 </script>
