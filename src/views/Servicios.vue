@@ -10,33 +10,33 @@
       </div>
     <!--Estructura para el efecto del titulo INICIO-->
       <div class="texto-servicios">
-      <p class="texto-explicativo">Ofrecemos a nuestros clientes una solución a sus problemas, creando esa empatía para vivir junto a el la experiencia de crecer y hacer realidad sus sueños, dando nuestra experiencia y soporte en todo lo relacionado a:</p>
+      <b-container class="texto-explicativo">Ofrecemos a nuestros clientes una solución a sus problemas, creando esa empatía para vivir junto a el la experiencia de crecer y hacer realidad sus sueños, dando nuestra experiencia y soporte en todo lo relacionado a:</b-container>
     <!--Estructura para el efecto de textos desplazados "slider" INICIO-->
         <div id="slider">
           <div class="contenido">
             <div class="slide">
                 <h4>Diseño arquitectónico.</h4>
-                <span>Desde la conceptualización del proyecto hasta su etapa ejecutiva, ponemos nuestra experiencia y conocimiento para llegar a la mejor solución arquitectónica, estética y funcional para el cliente.</span>
+                <b-container>Asesoramiento en todas las etapas del proyecto para llegar a la mejor solución arquitectónica, estética y funcional.</b-container>
             </div>
             <div class="slide">
                 <h4>Construcción</h4>
-                <span>Contamos con el equipo humano para materializar tu proyecto. Somos contratistas generales para entrega de proyectos llave en mano o según la necesidad que tenga el cliente.</span>
+                <b-container>Contamos con el equipo humano para materializar tu proyecto. Somos contratistas generales para entrega de proyectos llave en mano o según la necesidad.</b-container>
             </div>
             <div class="slide">
                 <h4>Consultoría en administración de la construcción</h4>
-                <span>Enfocado en aquellas empresas o constructores quienes ya tengan una obra en proceso o estén por iniciar algún proyecto, le ayudamos a tener el mejor control de la misma, partiendo desde la elaboración de catálogos de conceptos, control de estimaciones, gastos, insumos, control de materiales y personal tanto en materia de operación como en el tema administrativo (IMSS, Gestorias, Cierres de obra, etc).</span>
+                <b-container>Tanto en la etapa de planeacion o proyectos ya en proceso, ofrecemos asesoría en los gastos, en el proceso y en la administración.</b-container>
             </div>
             <div class="slide">
                 <h4>Desarrollo inmobiliario.</h4>
-                <span>Ayudamos al cliente a sacar el máximo provecho y rentabilidad para su propiedad. Haciendo un estudio exhaustivo de mercado, vocación del predio, diseño conceptual y estudio financiero, brindamos la mejor solución para conseguir los mejores rendimientos de la tierra en cuestión. Proyectos de inversión, aportación o consultoría, estamos para servirle.</span>
+                <b-container>Proyectos de inversión, aportación o consultoría, estamos para servirle.</b-container>
             </div>
             <div class="slide">
                 <h4>Gestión Inmobiliaria.</h4>
-                <span>Brindamos soluciones para comercializar tu propiedad, asi como todo lo relacionado a la gestión legal y de permisos para poder hacer la compra/venta de inmuebles.</span>
+                <b-container>Brindamos soluciones para comercializar tu propiedad, asi como todo lo relacionado a la gestión legal y de permisos para poder hacer la compra/venta de inmuebles.</b-container>
             </div>
             <div class="slide">
                 <h4> Mantenimiento</h4>
-                <span>Contamos con un equipo profesional de mantenimiento correctivo y preventivo en todos los rubros (obra civil, electricidad, plomeria, acabados, herreria, aire acondicionado) para que tus instalaciones estén siempre en perfectas condiciones.</span>
+                <b-container>Contamos con un equipo profesional de mantenimiento correctivo y preventivo en todos los rubros.</b-container>
             </div>
           </div>
         </div>
@@ -175,7 +175,6 @@
 .texto-explicativo{
   display: block;
   opacity: 0;
-  width: 90%;
   background-color: rgb(255, 255, 255);
   color: rgb(9, 73, 9);
   padding: 5px;
@@ -205,7 +204,6 @@
   font-size: 1em;
   color: #A37e2c;
   background-color: transparent;
-  border-radius: 50px;
   
 }
 
@@ -225,6 +223,8 @@
 }
 
 #slider .slide h4{
+  text-align: left;
+  padding-left: 5vw;
   padding-top: .5em;
   color: rgb(12, 52, 105);
 }

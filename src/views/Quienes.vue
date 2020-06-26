@@ -8,10 +8,10 @@
         </div>
       </div>
       <!--cuerpo de la pagina INICIO-->
-      <div class="texto_quienes">
-        <span class="primera-parte">
+      <b-container class="texto_quienes">
+        <b-container class="primera-parte">
           Fundada por profesionales en el ramo, en C+G Arquitectura y Desarrollos buscamos, de la mano con los clientes, crear esos espacios que les dignifiquen a ellos como a su entorno, llegando a la realización de ese proyecto que forma parte de su vida. Con una idea clara y compromiso, hemos dedicado nuestra experiencia a desarrollar proyectos integrando los valores que nos caracterizan, siendo estos:
-        </span>
+        </b-container>
         <span class="segunda-parte">
           <ul>
             <li class="li-1"> Honestidad</li>
@@ -20,10 +20,10 @@
             <li class="li-4"> Calidad y mejora continua</li>
           </ul>
         </span>
-        <span class="tercera-parte">
-          A la experiencia en el diseño arquitectónico, construcción y administración, se suma además la Gestión Inmobiliaria, donde buscamos apoyar al cliente en la búsqueda de ese lugar en donde compartirá momentos increíbles junto a sus seres mas queridos, le ayudamos a decidir cuál será la mejor opción para elegir entre la amplia gama de oportunidades del mercado o bien nos encargamos de promover su patrimonio para generarle rentabilidad mientras el goza de los beneficios de tener a un socio a su lado que se preocupe por sus intereses. O bien, si tiene una propiedad que quiere desarrollar, nos encargamos de asesorarle a encontrar la mejor vocación de su tierra, multiplicándole los beneficios que esta pudiera darle. Con estos y mas servicios, en C+G Arquitectura y Desarrollos buscamos siempre se, mas que un proveedor, un aliado de nuestros clientes para ayudarle a cumplir sus sueños y hacerlos realidad.
-        </span>
-      </div>
+        <b-container class="tercera-parte">
+          Con nuestra experiencia en el desarrollo arquitectónico, construcción, administración y la gestión inmobiliaria ofrecemos asesoramiento en los proyectos para que satisfaga las necesidades de nuestros clientes, tanto en diseño, beneficios y rentabilidad. Queremos que los sueños de nuestros clientes se hagan realidad.
+        </b-container>
+      </b-container>
     </b-container>
   </div>
 </template>

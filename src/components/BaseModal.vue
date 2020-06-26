@@ -17,6 +17,7 @@
           >
             <!--Imagenes para el carrusel, deben tener mas o menos la misma escala (alto es Xveces el ancho) independientemente del tamaño-->
             <b-carousel-slide
+              class="limit"
               v-for="(image, index) in images" :key="index"
               :img-src="require('../assets/' + image)"
             />
@@ -148,6 +149,7 @@ export default {
   display: inline-block;
   margin-top: 5vh;;
   width:60%;
+  z-index: 20;
 }
 .contenido{
   margin-left: auto;

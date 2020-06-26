@@ -26,9 +26,9 @@
         <p class="rights-reserved">© 2020 Garca Desarrollos. Todos los derechos reservados</p>
       </div>
       <div class="foot-mid">
-        <a>Inicio</a>
-        <a>Acerca de nosotros</a>
-        <a>Proyectos</a>
+        <a :to="{name: 'home'}">Inicio</a>
+        <a :to="{name: 'Quienes'}">Acerca de nosotros</a>
+        <a :to="{name: 'Servicios'}">Proyectos</a>
       </div>
       <div class="foot-bot">
         <p class="foot-contacto">Contacto</p>

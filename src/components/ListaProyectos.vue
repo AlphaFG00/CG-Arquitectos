@@ -81,33 +81,33 @@ export default {
           area: '600 metros cuadrados',
           images: [
             'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
+            'imagenproyectos/fotosproyectos/ALTITUDE-1.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE-4.jpg',
+            'imagenproyectos/fotosproyectos/ALTITUDE-5.jpg'
           ]
         },
         {
-          projectTitle: 'Apaches',
+          projectTitle: 'Apaches 555',
           description: 'Desarrollo Inmobiliario para un Fraccionamiento de 9 casas de nivel residencial alto, incluyendo Diseño y construcción, urbanización y comercialización.',
           location: 'Zapopan,Jalisco. ',
           area: '9 casas de 250 – 300 metros cuadrados',
           images: [
-            'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
+            'imagenproyectos/fotosproyectos/APACHES1.jpg',
+            'imagenproyectos/fotosproyectos/APACHES2.jpg',
+            'imagenproyectos/fotosproyectos/APACHES3.jpg',
+            'imagenproyectos/fotosproyectos/APACHES4.jpg'
           ]
         },
         {
-          projectTitle: 'Finox',
+          projectTitle: 'Torre Finox',
           description: 'Diseño y construcción de edificio de oficinas para Corporativo Financiero.',
           location: 'Zapopan,Jalisco. ',
           area: 'Sótano + 5 pisos de oficinas con un superficie total de 1,500 metros cuadrados',
           images: [
-            'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
+            'imagenproyectos/fotosproyectos/FINOX1.jpg',
+            'imagenproyectos/fotosproyectos/FINOX2.jpg',
+            'imagenproyectos/fotosproyectos/FINOX3.jpg',
+            'imagenproyectos/fotosproyectos/FINOX4.jpg'
           ]
         },
         {
@@ -116,34 +116,33 @@ export default {
           location: 'Santa Catarina, N.L.',
           area: '300 metros cuadrados',
           images: [
-            'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
+            'imagenproyectos/fotosproyectos/HUASTECA1.jpg',
+            'imagenproyectos/fotosproyectos/HUASTECA3.jpg',
+            'imagenproyectos/fotosproyectos/HUASTECA4.jpg',
+            'imagenproyectos/fotosproyectos/HUASTECA5.jpg',
+            'imagenproyectos/fotosproyectos/HUASTECA6.jpg',
+            'imagenproyectos/fotosproyectos/HUASTECA7.jpg',
+            'imagenproyectos/fotosproyectos/HUASTECA8.jpg',
           ]
         },
         {
-          projectTitle: 'Las Aguilas',
-          description: 'Diseño para remodelación de tienda',
-          location: 'Zapopan,Jalisco. ',
-          area: '1000 metros cuadrados',
-          images: [
-            'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
-          ]
-        },
-        {
-          projectTitle: 'Leon David',
+          projectTitle: 'Casa de Leon David',
           description: 'Diseño y construcción de casa habitación.',
           location: 'Guadalajara, Jalisco ',
           area: '350 metros cuadrados',
           images: [
-            'imagenproyectos/fotosproyectos/ALTITUDE-2.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 1.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 4.jpg',
-            'imagenproyectos/fotosproyectos/ALTITUDE 5.jpg'
+            'imagenproyectos/fotosproyectos/LEONDAVID1.jpg',
+            'imagenproyectos/fotosproyectos/LEONDAVID2.jpg',
+            'imagenproyectos/fotosproyectos/LEONDAVID3.jpg',
+          ]
+        },
+        {
+          projectTitle: 'Soriana Las Aguilas',
+          description: 'Diseño para remodelación de tienda',
+          location: 'Zapopan,Jalisco. ',
+          area: '1000 metros cuadrados',
+          images: [
+            'imagenproyectos/fotosproyectos/SORIANA_AGUILAS.jpg'
           ]
         }
       ]
