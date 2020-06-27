@@ -18,11 +18,18 @@
     width: auto;
     min-height: 100vh;
     padding-bottom: 10px;
+    background-image:url('../assets/fondo.jpg');
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: showup 1s forwards;
 }
 
   #view-inicio{
     background-color:transparent;
     text-align: center;
+        background-color: rgba(255, 255, 255, 0.568);
   }
 
   .Titulo-Cuerpo{
@@ -51,7 +58,9 @@
   }
 
   .cuerpo-bienvenida{
-    text-align: left !important;
+    text-align: center !important;
+    margin-top: 10vh;
+    height: 50vh;
   }
 
   .texto-bienvenida{
@@ -75,7 +84,7 @@
       opacity: 0;
     }
     100%{
-      opacity: 100%;
+      opacity: 1;
     }
   }
 </style>
