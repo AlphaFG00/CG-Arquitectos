@@ -1,5 +1,9 @@
+/** Vue imports */
 import Vue from 'vue'
 import Vuex from 'vuex'
+
+/** Modules imports */
+import mail from '@/store/modules/mail'
 
 Vue.use(Vuex)
 
@@ -19,5 +23,6 @@ export default new Vuex.Store({
   actions: {
   },
   modules: {
+    mail
   }
 })
