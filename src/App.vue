@@ -3,7 +3,10 @@
 
     <b-navbar toggleable="lg" type="light" id="nav-bg">
       <b-container>
-        <b-navbar-brand :to="{name: 'home'}" class="brillo"><img src="./assets/logoc+g.png" alt="Logo" class="logo-empresa"><span></span></b-navbar-brand>
+        <b-navbar-brand :to="{name: 'home'}" class="brillo">
+          <img src="./assets/logoc+g.png" alt="Logo" class="logo-empresa">
+          <span></span>
+        </b-navbar-brand>
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
@@ -67,13 +70,12 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .logo-empresa{
   width: auto;
-  max-height: 2.5em;
+  max-height: 100%;
 }
 
 .brillo{
     position:relative;
     display: block;
-    font-size:70px;
     height: 50px;
     width: 140px;  
     text-decoration:none;
@@ -85,7 +87,7 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 .brillo span{
     position:relative;
     display: block;
-    background:url(./assets/brillog.png) no-repeat;  
+    background:url('~@/assets/brillog.png') no-repeat;
     background-position: -250px 0px;
     margin-top:-49px;
     margin-left: 2.5px;
