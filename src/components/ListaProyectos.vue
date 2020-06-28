@@ -68,6 +68,16 @@ import BaseModal from '@/components/BaseModal.vue'
 
 export default {
   name:'ListaProyectos',
+  created () {
+    const component = this;
+    this.handler = function () {
+      component.closeAllModals()
+    }
+    window.addEventListener('keyup', this.handler);
+  },
+  beforeDestroy () {
+    window.removeEventListener('keyup', this.handler);
+  },
   data(){
     return {
       slide: 0,
@@ -159,6 +169,12 @@ export default {
       let index = this.projects_data.findIndex(o => o.projectTitle == value)
       this.projects_data[index].is_shown = false
       this.reactiveModal(index)
+    },
+    closeAllModals () {
+      this.projects_data.forEach((obj, index) => {
+        obj.is_shown = false
+        this.reactiveModal(index)
+      })
     },
     prev() {
       this.$refs.CarouselProyectos.prev()
