@@ -66,7 +66,7 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 #nav-fix{
   padding-top: 5em;
   background-color: #ffffff;
-  min-height: 90vh;
+  min-height: 89vh;
 }
 .logo-empresa{
   width: auto;

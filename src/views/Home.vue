@@ -29,7 +29,7 @@
   #view-inicio{
     background-color:transparent;
     text-align: center;
-        background-color: rgba(255, 255, 255, 0.568);
+    background-color: rgba(255, 255, 255, 0.568);
   }
 
   .Titulo-Cuerpo{

@@ -23,6 +23,29 @@
         <b-container class="tercera-parte">
           Con nuestra experiencia en el desarrollo arquitectónico, construcción, administración y la gestión inmobiliaria ofrecemos asesoramiento en los proyectos para que satisfaga las necesidades de nuestros clientes, tanto en diseño, beneficios y rentabilidad. Queremos que los sueños de nuestros clientes se hagan realidad.
         </b-container>
+        <b-container class="cuarta-parte">
+          <span class="msj-aclarativo">Experiencia de mas de 9 años, previos a la empresa, en el ambito:</span>
+          <div class="comercial">
+            <span class="exp-title">Comercial con:</span>
+            <span>
+              <!--By McDonald's - It can be found on McDonald's webpage., Public Domain, https://commons.wikimedia.org/w/index.php?curid=12648922-->
+              <img src="../assets/marcas/McDonalds.png" alt="McDon">
+              <!--By Source, Fair use, https://en.wikipedia.org/w/index.php?curid=30335490-->
+              <img src="../assets/marcas/StarBucks.png" alt="startb">
+              <!--By Pinclipart ,Fair use,https://www.pinclipart.com/pindetail/ihxxRT_las-alitas-in-jurez-las-alitas-logo-clipart/-->
+              <img src="../assets/marcas/LasAlitas.png" alt="LasAlitas">
+            </span>
+          </div>
+          <div class="industrial">
+            <span class="exp-title">Industrial con:</span>
+            <span>
+              <!--By The original uploader was Seo75 at English Wikipedia. - Transferred from en.wikipedia to Commons., Public Domain, https://commons.wikimedia.org/w/index.php?curid=11296821-->
+              <img src="../assets/marcas/Matel.png" alt="Matel">
+              <!--By Unknown author - Vektordaten: [1] (PDF)Farbinfo: http://www.takata.com/Investors/images/logosmall.gifVon Marsupilami am 30. Oktober 2010 in die deutschsprachige Wikipedia geladen., Public Domain, https://commons.wikimedia.org/w/index.php?curid=40442895-->
+              <img src="../assets/marcas/Takata.png" alt="Takata">
+            </span>
+          </div>
+        </b-container>
       </b-container>
     </b-container>
   </div>
@@ -40,7 +63,6 @@ export default {
   .quienes{
     width: auto;
     min-height: 100vh;
-    padding-bottom: 10px;
   }
   #view-quienes{
     background-color:transparent;
@@ -133,6 +155,29 @@ export default {
     padding: 5px;
     animation: show-text 1.5s 3.5s forwards;
     text-align: left;
+  }
+
+  .cuarta-parte .comercial img, .cuarta-parte .industrial img{
+    width: auto;
+    height: 45px;
+    margin-left: 20px;
+  }
+  .cuarta-parte {
+    margin-top: 10px;
+    opacity: 0;
+    text-align: left;
+    animation: show-text 1.5s 4s forwards;
+  }
+  .cuarta-parte div{
+    margin-top: 15px;
+  }
+  .cuarta-parte .exp-title {
+    color: rgb(12, 52, 105);
+  }
+
+  .cuarta-parte .msj-aclarativo{
+    color: rgb(12, 52, 105);
+    margin-left: 20px;
   }
 
 @keyframes show-list-part {

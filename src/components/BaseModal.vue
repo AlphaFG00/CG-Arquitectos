@@ -147,7 +147,7 @@ export default {
 /*Css de trancisiones para aparecer y desaparecer FIN*/
 .contenido .proyecto-imagen{
   display: inline-block;
-  margin-top: 5vh;;
+  margin-top: 5vh;
   width:60%;
   z-index: 20;
 }
@@ -264,17 +264,21 @@ export default {
     position: normal;
     display: inline-block;
     padding-top: .5vh;
+    padding-bottom: 10vh;
     width: 90%;
+    height: 9vh;
     padding-bottom: .5vh;
-    border-bottom: double 12px #A37e2c;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
+    border-bottom: double 10px #A37e2c;
   }
   .contenido .proyecto-imagen{/*Dimenciones de la imagen*/
     display: inline-block;/*Obligar a estar en una linea de bloque*/
     margin-top: 5vh;
-    width:45%; /*ancho de las imagenes*/
+    width:45%;
+    max-width: 35vw;
+ /*ancho de las imagenes*/
   }
+
+
   .cerrar{ /*icono de cerrar*/
     color: #858383;
     float: right;
@@ -295,7 +299,6 @@ export default {
   #slidert{ 
     width:95%;
     height: 300px;
-    border-left: double 5px;
     margin-left: 1vw;
     padding-left: 1vw;
   }
@@ -310,6 +313,10 @@ export default {
     width: 100%;
     padding: 0;
   }
+ }
+
+.limit{
+  background-color: rgba(128, 128, 128, 0.685);
 }
 
 @keyframes slide-animation {/*Aqui se define la animacion*/

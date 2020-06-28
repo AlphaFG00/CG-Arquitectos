@@ -5,7 +5,6 @@
           id="CarouselProyectos"
           v-model="slide"
           :interval="4000"
-          background="#ffffff"
           ref="CarouselProyectos"
           @sliding-start="sliding = true"
           @sliding-end="sliding = false"
@@ -15,7 +14,7 @@
         <li role="button" id="CarouselProyectos___BV_indicator_1_" data-slide-to="0" aria-current="false" aria-label="Goto Slide 1" aria-controls="CarouselProyectos___BV_inner_" @click="setSlide(0)" :class="(slide == 0) ? 'active' : ''"></li>
         <li role="button" id="CarouselProyectos___BV_indicator_2_" data-slide-to="1" aria-current="false" aria-label="Goto Slide 2" aria-controls="CarouselProyectos___BV_inner_" @click="setSlide(1)" :class="(slide == 1) ? 'active' : ''"></li>
       </ol>
-      <b-carousel-slide img-blank>
+      <b-carousel-slide>
         <template>
           <!--Saca las imagenes y nombres de images del store-->
           <b-row class="contenedor">
@@ -29,7 +28,7 @@
         </template>
       </b-carousel-slide>
         <!--Pack de 6-->
-      <b-carousel-slide  img-blank img-alt="Blank image">
+      <b-carousel-slide>
         <template>
           <b-row class="contenedor">
             <b-col cols="12" md="6" lg="4" class="thumbex" v-for="(image, index) in images" :key="index">
@@ -95,7 +94,11 @@ export default {
             'imagenproyectos/fotosproyectos/APACHES1.jpg',
             'imagenproyectos/fotosproyectos/APACHES2.jpg',
             'imagenproyectos/fotosproyectos/APACHES3.jpg',
-            'imagenproyectos/fotosproyectos/APACHES4.jpg'
+            'imagenproyectos/fotosproyectos/APACHES4.jpg',
+            'imagenproyectos/fotosproyectos/APACHES5.jpg',
+            'imagenproyectos/fotosproyectos/APACHES6.jpg',
+            'imagenproyectos/fotosproyectos/APACHES7.jpg',
+            'imagenproyectos/fotosproyectos/APACHES8.jpg'
           ]
         },
         {
@@ -104,36 +107,10 @@ export default {
           location: 'Zapopan,Jalisco. ',
           area: 'Sótano + 5 pisos de oficinas con un superficie total de 1,500 metros cuadrados',
           images: [
-            'imagenproyectos/fotosproyectos/FINOX1.jpg',
-            'imagenproyectos/fotosproyectos/FINOX2.jpg',
-            'imagenproyectos/fotosproyectos/FINOX3.jpg',
-            'imagenproyectos/fotosproyectos/FINOX4.jpg'
-          ]
-        },
-        {
-          projectTitle: 'Huasteca',
-          description: 'Diseño y supervisión de obra.',
-          location: 'Santa Catarina, N.L.',
-          area: '300 metros cuadrados',
-          images: [
-            'imagenproyectos/fotosproyectos/HUASTECA1.jpg',
-            'imagenproyectos/fotosproyectos/HUASTECA3.jpg',
-            'imagenproyectos/fotosproyectos/HUASTECA4.jpg',
-            'imagenproyectos/fotosproyectos/HUASTECA5.jpg',
-            'imagenproyectos/fotosproyectos/HUASTECA6.jpg',
-            'imagenproyectos/fotosproyectos/HUASTECA7.jpg',
-            'imagenproyectos/fotosproyectos/HUASTECA8.jpg',
-          ]
-        },
-        {
-          projectTitle: 'Casa de Leon David',
-          description: 'Diseño y construcción de casa habitación.',
-          location: 'Guadalajara, Jalisco ',
-          area: '350 metros cuadrados',
-          images: [
-            'imagenproyectos/fotosproyectos/LEONDAVID1.jpg',
-            'imagenproyectos/fotosproyectos/LEONDAVID2.jpg',
-            'imagenproyectos/fotosproyectos/LEONDAVID3.jpg',
+            'imagenproyectos/fotosproyectos/FINOX1.png',
+            'imagenproyectos/fotosproyectos/FINOX2.png',
+            'imagenproyectos/fotosproyectos/FINOX3.png',
+            'imagenproyectos/fotosproyectos/FINOX4.png'
           ]
         },
         {
@@ -143,6 +120,17 @@ export default {
           area: '1000 metros cuadrados',
           images: [
             'imagenproyectos/fotosproyectos/SORIANA_AGUILAS.jpg'
+          ]
+        },
+        {
+          projectTitle: 'Casa de Abraham Rodriguez',
+          description: 'Diseño y construcción para remodelación de casa habitación (en proceso).',
+          location: 'Guadalupe, N.L. ',
+          area: '300 metros cuadrados',
+          images: [
+            'imagenproyectos/fotosproyectos/CASA_ABR1.png',
+            'imagenproyectos/fotosproyectos/CASA_ABR2.png',
+            'imagenproyectos/fotosproyectos/CASA_ABR3.png'
           ]
         }
       ]
@@ -257,11 +245,11 @@ export default {
   .carousel-control-prev > span{
     filter: invert(100%) !important;
   }
-
+/*Tiene que ajustarse para el tamaño del carrucel de una sola fila en moviles */
 @media (min-width: 0) and (max-width: 767px){
   .carousel-item{
-    min-height: 1450px;
-    height: 1450px;
+    min-height: 1200px;
+    height: 1200px;
   }
   .contenedor>.thumbex>.thumbnail {
     max-width: 300px;

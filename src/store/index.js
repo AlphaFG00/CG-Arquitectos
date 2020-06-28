@@ -9,9 +9,8 @@ export default new Vuex.Store({
       {name : '1',title:"Altitude"},
       {name : '2',title:"Apaches 555"},
       {name : '3',title:"Torre Finox"},
-      {name : '4',title:"Huasteca"},
-      {name : '5',title:"Casa de León David"},
-      {name : '6',title:"Soriana Las Águilas"}
+      {name : '6',title:"Soriana Las Águilas"},
+      {name : '7',title:"Casa de Abraham Rodriguez"}
     ]
   },
   mutations: {
