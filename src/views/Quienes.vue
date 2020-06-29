@@ -166,6 +166,8 @@ export default {
     margin-top: 10px;
     opacity: 0;
     text-align: left;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
     animation: show-text 1.5s 4s forwards;
   }
   .cuarta-parte div{
