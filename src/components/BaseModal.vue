@@ -24,24 +24,45 @@
           </b-carousel>
         </div>
         <div class="proyecto-texto">
-          <div class="cuadro">
-          <!--Desplazador (Inicio)-->
-            <div id="slidert">
-              <div class="contenido2">
-                <div class="slidet">
+          <b-carousel
+                id="Carousel_2"
+                v-model="slid"
+                :interval="5000"
+                ref="Carousel_2"
+                @sliding-start="sliding = true"
+                @sliding-end="sliding = false"
+          >
+            <ol id="Carousel_2___BV_indicators_" class="carousel-indicators Lista-color" aria-hidden="false" aria-label="Select a slide to display" aria-owns="Carousel_2___BV_inner_">
+            <!--Si se necesita agregar mas texto (bloque) se hace otra paguina para el carrucel con esto:-->
+              <li role="button" id="Carousel_2___BV_indicator_1_" data-slide-to="0" aria-current="false" aria-label="Goto Slide 1" aria-controls="Carousel_2___BV_inner_" @click="setSlide2(0)" :class="(slid == 0) ? 'active' : ''"></li>
+              <li role="button" id="Carousel_2___BV_indicator_2_" data-slide-to="1" aria-current="false" aria-label="Goto Slide 2" aria-controls="Carousel_2___BV_inner_" @click="setSlide2(1)" :class="(slid == 1) ? 'active' : ''"></li>
+              <li role="button" id="Carousel_2___BV_indicator_3_" data-slide-to="2" aria-current="false" aria-label="Goto Slide 3" aria-controls="Carousel_2___BV_inner_" @click="setSlide2(2)" :class="(slid == 2) ? 'active' : ''"></li>
+            </ol>
+            <b-carousel-slide>
+              <template>
+                <b-container class="slidet">
                   <span class="Slider-Titulo">Descripción</span>
                   <p>{{ description }}</p>
-                </div>
-                <div class="slidet">
+                </b-container>
+              </template>
+            </b-carousel-slide>
+            <b-carousel-slide>
+              <template>
+                <b-container class="slidet">
                   <span class="Slider-Titulo">Ubicación</span>
                   <p>{{ location }}</p>
+                </b-container>
+              </template>
+            </b-carousel-slide>
+            <b-carousel-slide>
+              <template>
+                <b-container class="slidet">
                   <span class="Slider-Titulo">Superficie</span>
                   <p>{{ area }}</p>
-                </div>
-              </div>
-            </div>
-          <!--Desplazador (Fin)-->
-          </div>
+                </b-container>
+              </template>
+            </b-carousel-slide>
+          </b-carousel>
         </div>
       </div>
     </div>
@@ -82,6 +103,7 @@ export default {
   data(){
     return {
       slide: 0,
+      slid: 0,
       sliding: null,
       showing_class: 'show-modal'
     }
@@ -100,24 +122,32 @@ export default {
     },
     onSlideEnd() {
       this.sliding = false
+    },
+    setSlide2(indice) {
+      this.$refs.Carousel_2.setSlide(indice)
     }
   }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 /*Css para la trancision de las ventanas INICIO*/
-.show-modal{
+.show-modal,.bye-modal{
   display: block !important;
   position: fixed; 
   transition: all 1s ease;
-  animation: suave 1s forwards; /*animacion de aparicion suave*/
 }
-.bye-modal{
-  display: block !important;
-  position: fixed;
-  transition: all 1s ease;
-  animation: suave-inverso 1s forwards; /*animacion de desaparicion suave*/
+.show-modal{animation: suave 1s forwards; /*animacion de aparicion suave*/}
+.bye-modal{animation: suave-inverso 1s forwards; /*animacion de desaparicion suave*/}
+
+@keyframes suave {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@keyframes suave-inverso {
+  0%{opacity: 1 ;}
+  100%{opacity: 0 ;}
 }
 .modal{
   z-index: 20; /* Manda al frente de toda la paguina el modal */
@@ -126,41 +156,30 @@ export default {
   top: 0;
   overflow: auto;
   background-color: rgba(35, 38, 58, 0.705); /*Efecto oscuro transparente de fondo*/
-}
-@keyframes suave {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
+  h2{
+    text-align: center;
+    font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif !important;
+    color: rgb(12, 105, 12);
+    padding-top: 5vh;
+    padding-bottom: 3vh;
   }
 }
 
-@keyframes suave-inverso {
-  0%{
-    opacity: 1 ;
-  }
-  100%{
-    opacity: 0 ;
-  }
-}
-/*Css de trancisiones para aparecer y desaparecer FIN*/
-.contenido .proyecto-imagen{
-  display: inline-block;
-  margin-top: 5vh;
-  width:60%;
-  z-index: 20;
-}
 .contenido{
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3vh; /*Espacio entre tope de ventana del navegador y la ventana modal*/ 
-  min-height: 80vh; /*Altura del 80% del dispositivo*/
+  margin-top: 3vh; /*Espacio entre tope de ventana del navegador y la ventana modal*/
   background-color: white;
-}
-.contenido .proyecto-texto{
-  overflow: auto;
-  height: 50%;
+  .proyecto-texto{
+    display: inline-block; /*Tratar como un bloque*/
+    margin-top: 5vh;
+    width: 40%;
+  }
+  .proyecto-imagen{
+    display: inline-block;
+    margin-top: 5vh;
+    width:50%;
+  }
 }
 .cerrar{ /*icono de cerrar*/
   color: #aaaaaa;
@@ -168,30 +187,14 @@ export default {
   font-size: 30px;
   font-weight: bold;
   margin-right: 4px;
+  &:hover, /*Animacion del icono de cierre al pasar el puntero o dar click*/
+  &:focus {
+    color:  #801919;
+    cursor: pointer;
+    transition: .5s
+  }
 }
-.cerrar:hover, /*Animacion del icono de cierre al pasar el puntero o dar click*/
-.cerrar:focus {
-  color:  #801919;;
-  text-decoration: none;
-  cursor: pointer;
-  transition: .5s
-}
-
 /*Texto del modal */
-.cuadro{
-  display: float;
-  color: black;
-  background-color:transparent;
-  width: 100%;
-  padding-right: 15vw;
-  padding-left:15vw;
-  float: right;
-}
-
-.cuadro p{
-  margin-bottom: 0;
-  margin-top: 0;
-}
 
 .Slider-Titulo{
   font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif !important;
@@ -201,67 +204,83 @@ export default {
   text-align: center;
   letter-spacing: 0.25em;
   margin: 0;
-  margin-top: 3vh;
-  margin-bottom: .5vh;
 }
 
-.modal h2{
-  text-align: center;
-  font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif !important;
-  color: rgb(12, 105, 12);
-  padding-top: 5vh;
-  padding-bottom: 3vh;
-}
-
-#slidert,  #slidert .slidet{
-  width: 60vw;
-  height: 200px;
-}
-#slidert {
-  overflow: hidden;
+.slidet{
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1em;
   color: #A37e2c;
-  background-color: transparent;
-}
-
-#slidert .contenido2 {
-  position: relative;
-  width: 350%; /* Tiene que ser lo bastante grande como para todos los mensajes*/
-  top: 0;
-  right: 0;
-  animation: slide-animation 10s infinite; /*Aqui se aplica la animacion, nombre, duracion, Propiedad al acabar (infinite = loop)*/
-}
-
-#slidert .slidet {
-  position: relative;
-  float: left;
-  box-sizing: border-box;
-}
-
-@media (min-width: 0px) and (max-width: 992px) and (orientation: landscape){
-  .contenido{
-    min-width:90vw;
-    min-height: 80vh;
-    width: 80vw;
+  min-height: 150px;
+  p{
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
-@media (min-width: 993px) and (orientation: landscape){ /*Vista computadora*/
+@media (min-width: 0px) and (max-width: 767px){
+  .contenido{
+    max-width:100vw;
+    min-height: 90vh;
+    width: 100vw;
+    .proyecto-imagen{
+      width: 85%;
+      margin-top: 0;
+    }
+    .proyecto-texto{
+      width: 95%;
+      margin-top: 0;
+      .carousel-item {
+        min-height: 225px !important;
+        height: 50vw;
+        max-height: 260px !important;
+        width: 100vw;
+      }
+    }
+  }
+  .slidet{
+    min-height: 130px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+  .contenido{
+    max-width:90vw;
+    min-height: 80vh;
+    width: 80vw;
+    .proyecto-imagen{
+      width: 75%;
+      margin-top: 0;
+    }
+    .proyecto-texto{
+      width: 70%;
+      margin-top: 0;
+      .carousel-item {
+        min-height: 30vh !important;
+        height: 30vw;
+        max-height: 300px !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 993px){ /*Vista computadora*/
   .contenido{
     margin-top: 10vh;
     max-width: 1100px;
-    max-height: 80vh; 
+    max-height: 90vh;
     width: 95vw;
-    min-height: 70vh;
+    height: 80vh; 
+    min-height: 600px !important; /*Altura del 80% del dispositivo*/
     padding-top: 0vh; /*Dimensiones del nav*/
+    .proyecto-texto .carousel-item {
+      min-height: 40vh !important;
+      height: 40vw;
+      max-height: 300px !important;
+    }
   }
   .modal h2{ /*Formato del titulo del modal*/
-    text-align: center;
-    font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif !important;
     font-size: 2.5em;
-    color: rgb(12, 105, 12);
-    position: normal;
     display: inline-block;
     padding-top: .5vh;
     padding-bottom: 10vh;
@@ -270,75 +289,14 @@ export default {
     padding-bottom: .5vh;
     border-bottom: double 10px #A37e2c;
   }
-  .contenido .proyecto-imagen{/*Dimenciones de la imagen*/
-    display: inline-block;/*Obligar a estar en una linea de bloque*/
-    margin-top: 5vh;
-    width:45%;
-    max-width: 35vw;
- /*ancho de las imagenes*/
-  }
-
-
   .cerrar{ /*icono de cerrar*/
-    color: #858383;
-    float: right;
     font-size: 50px;
-    font-weight: bold;
     margin-right: 20px;
     margin-left: 80%;
   }
- 
-  .proyecto-texto{
-    display: block; /*Tratar como un bloque*/
-    float: right; /*poner a la derecha del contenedor*/
-    margin-right:2%;
-    max-width: 48%;  /*Compartir la mitad del tamaño 48% + 2%*/
-    margin-top: 5vh; /*Espacio alejado del titulo*/
-  }
-/*Css para Slider de texto inicio*/
-  #slidert{ 
-    width:95%;
-    height: 300px;
-    margin-left: 1vw;
-    padding-left: 1vw;
-  }
-  .slidet{
-    padding-top:25px;
-    width:27% !important;
-    height: 300px !important;
-  }
-  .cuadro{
-    display:float;
-    right:0;
-    width: 100%;
-    padding: 0;
-  }
- }
-
-.limit{
-  background-color: rgba(128, 128, 128, 0.685);
 }
-
-@keyframes slide-animation {/*Aqui se define la animacion*/
-  0% { 
-    opacity: 0;
-    right: 0;
-  }
-  5% {
-    opacity: 1;
-    right: 0; 
-  }
-  29% { right: 0;}
-  39% { right: 0%;}
-  62% { right: 100%;}
-  72% { right: 100%;}
-  95%{
-    right:100%;
-    opacity:1;
-}
-  100%{ right:100%;
-    opacity:0;
-  }
-}
-/*Css para Slider de texto fin*/
+  .limit{ background-color: rgba(128, 128, 128, 0.685);}
+  .Lista-color > li,
+  .carousel-control-next > span,
+  .carousel-control-prev > span{filter: invert(100%) !important;}
 </style>

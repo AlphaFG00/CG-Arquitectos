@@ -22,7 +22,7 @@
   </b-container>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .foot-body {
   background: linear-gradient(160deg, rgb(226, 220, 220) 10%,rgb(240, 237, 237) 40%, rgb(230, 229, 229)50%);
   border-top: double 4px #A37e2c;
