@@ -10,37 +10,65 @@
       </div>
     <!--Estructura para el efecto del titulo INICIO-->
       <div class="texto-servicios">
-      <b-container class="texto-explicativo">Ofrecemos a nuestros clientes una solución a sus problemas, creando esa empatía para vivir junto a el la experiencia de crecer y hacer realidad sus sueños, dando nuestra experiencia y soporte en todo lo relacionado a:</b-container>
-    <!--Estructura para el efecto de textos desplazados "slider" INICIO-->
+        <b-container class="texto-explicativo text-justify">Ofrecemos a nuestros clientes una solución a sus problemas, creando esa empatía para vivir junto a el la experiencia de crecer y hacer realidad sus sueños, dando nuestra experiencia y soporte en todo lo relacionado a:</b-container>
+        <!--Estructura para el efecto de textos desplazados "slider" INICIO-->
+        <div>
+          <b-card no-body class="mt-3 mb-3">
+            <b-tabs pills
+              card vertical nav-wrapper-class="col-6 col-sm-5 col-md-4"
+              content-class="text-cggolden text-justify justify-content-center align-self-center pr-0"
+              active-nav-item-class="bg-cgblue text-white"
+            >
+              <b-tab title="Diseño arquitectónico" active>
+                <b-card-text>Asesoramiento en todas las etapas del proyecto para llegar a la mejor solución arquitectónica, estética y funcional.</b-card-text>
+              </b-tab>
+              <b-tab title="Construcción">
+                <b-card-text>Contamos con el equipo humano para materializar tu proyecto. Somos contratistas generales para entrega de proyectos llave en mano o según la necesidad.</b-card-text>
+              </b-tab>
+              <b-tab title="Consultoría en administración de la construcción">
+                <b-card-text>Tanto en la etapa de planeacion o proyectos ya en proceso, ofrecemos asesoría en los gastos, en el proceso y en la administración.</b-card-text>
+              </b-tab>
+              <b-tab title="Desarrollo inmobiliario">
+                <b-card-text>Proyectos de inversión, aportación o consultoría, estamos para servirle.</b-card-text>
+              </b-tab>
+              <b-tab title="Gestión Inmobiliaria.">
+                <b-card-text>Brindamos soluciones para comercializar tu propiedad, asi como todo lo relacionado a la gestión legal y de permisos para poder hacer la compra/venta de inmuebles.</b-card-text>
+              </b-tab>
+              <b-tab title="Mantenimiento">
+                <b-card-text>Contamos con un equipo profesional de mantenimiento correctivo y preventivo en todos los rubros.</b-card-text>
+              </b-tab>
+            </b-tabs>
+          </b-card>
+        </div>
         <div id="slider">
           <div class="contenido">
             <div class="slide">
                 <h4>Diseño arquitectónico.</h4>
-                <b-container>Asesoramiento en todas las etapas del proyecto para llegar a la mejor solución arquitectónica, estética y funcional.</b-container>
+                <b-container class="text-justify">Asesoramiento en todas las etapas del proyecto para llegar a la mejor solución arquitectónica, estética y funcional.</b-container>
             </div>
             <div class="slide">
                 <h4>Construcción</h4>
-                <b-container>Contamos con el equipo humano para materializar tu proyecto. Somos contratistas generales para entrega de proyectos llave en mano o según la necesidad.</b-container>
+                <b-container class="text-justify">Contamos con el equipo humano para materializar tu proyecto. Somos contratistas generales para entrega de proyectos llave en mano o según la necesidad.</b-container>
             </div>
             <div class="slide">
                 <h4>Consultoría en administración de la construcción</h4>
-                <b-container>Tanto en la etapa de planeacion o proyectos ya en proceso, ofrecemos asesoría en los gastos, en el proceso y en la administración.</b-container>
+                <b-container class="text-justify">Tanto en la etapa de planeacion o proyectos ya en proceso, ofrecemos asesoría en los gastos, en el proceso y en la administración.</b-container>
             </div>
             <div class="slide">
                 <h4>Desarrollo inmobiliario.</h4>
-                <b-container>Proyectos de inversión, aportación o consultoría, estamos para servirle.</b-container>
+                <b-container class="text-justify">Proyectos de inversión, aportación o consultoría, estamos para servirle.</b-container>
             </div>
             <div class="slide">
                 <h4>Gestión Inmobiliaria.</h4>
-                <b-container>Brindamos soluciones para comercializar tu propiedad, asi como todo lo relacionado a la gestión legal y de permisos para poder hacer la compra/venta de inmuebles.</b-container>
+                <b-container class="text-justify">Brindamos soluciones para comercializar tu propiedad, asi como todo lo relacionado a la gestión legal y de permisos para poder hacer la compra/venta de inmuebles.</b-container>
             </div>
             <div class="slide">
                 <h4> Mantenimiento</h4>
-                <b-container>Contamos con un equipo profesional de mantenimiento correctivo y preventivo en todos los rubros.</b-container>
+                <b-container class="text-justify">Contamos con un equipo profesional de mantenimiento correctivo y preventivo en todos los rubros.</b-container>
             </div>
           </div>
         </div>
-<!--Estructura para el efecto de textos desplazados "slider" FIN-->
+        <!--Estructura para el efecto de textos desplazados "slider" FIN-->
       </div>
     </b-container>
   </div>

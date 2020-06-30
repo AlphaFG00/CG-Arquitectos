@@ -20,7 +20,7 @@
   </b-navbar>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #nav-bg {
   background: linear-gradient(160deg, rgb(255, 255, 255) 10%,rgb(240, 237, 237) 40%, rgb(255, 255, 255)50%);
   position: fixed;

@@ -2,14 +2,14 @@
   <div class="quienes">
     <b-container id="view-quienes">
       <div class="Titulo-Cuerpo">
-        <div class="titulo-letra">Garca</div>
+        <div class="titulo-letra">C+G</div>
         <div class="titulo-restante">
           <span>Desarrollos</span>
         </div>
       </div>
       <!--cuerpo de la pagina INICIO-->
       <b-container class="texto_quienes">
-        <b-container class="primera-parte">
+        <b-container class="primera-parte text-justify">
           Fundada por profesionales en el ramo, en C+G Arquitectura y Desarrollos buscamos, de la mano con los clientes, crear esos espacios que les dignifiquen a ellos como a su entorno, llegando a la realización de ese proyecto que forma parte de su vida. Con una idea clara y compromiso, hemos dedicado nuestra experiencia a desarrollar proyectos integrando los valores que nos caracterizan, siendo estos:
         </b-container>
         <span class="segunda-parte">
@@ -20,11 +20,11 @@
             <li class="li-4"> Calidad y mejora continua</li>
           </ul>
         </span>
-        <b-container class="tercera-parte">
+        <b-container class="tercera-parte text-justify">
           Con nuestra experiencia en el desarrollo arquitectónico, construcción, administración y la gestión inmobiliaria ofrecemos asesoramiento en los proyectos para que satisfaga las necesidades de nuestros clientes, tanto en diseño, beneficios y rentabilidad. Queremos que los sueños de nuestros clientes se hagan realidad.
         </b-container>
         <b-container class="cuarta-parte mb-5">
-          <span class="msj-aclarativo">Experiencia de mas de 9 años con otras empresas, en los ámbitos:</span>
+          <span class="msj-aclarativo text-justify">Experiencia de mas de 9 años con otras empresas, en los ámbitos:</span>
           <b-card-group deck class="text-center">
             <b-card no-body class="overflow-hidden border-green">
               <b-row align-v="center" no-gutters class="mt-3">

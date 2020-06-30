@@ -14,7 +14,7 @@ export default new Vuex.Store({
       {name : '2',title:"Apaches 555"},
       {name : '3',title:"Torre Finox"},
       {name : '6',title:"Soriana Las Águilas"},
-      {name : '7',title:"Casa de Abraham Rodriguez"}
+      {name : '7',title:"Casa Abraham Rodriguez"}
     ]
   },
   mutations: {

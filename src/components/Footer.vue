@@ -15,7 +15,7 @@
         <i class="fab fa-facebook-square color-fb"></i>
         <i class="fab fa-whatsapp-square color-wa"></i><br>
         <span class="block">
-          <i class="fas fa-phone-square color-phone"></i><span class="i_block ml-3">81 1354 5442</span>
+          <i class="fas fa-phone-square color-phone"></i><span class="i_block ml-3">(+521) 811 978 3811</span>
         </span>
       </b-col>
     </b-row>

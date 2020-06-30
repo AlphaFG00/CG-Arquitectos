@@ -2,9 +2,9 @@
   <div class="proyectos">
     <b-container id="view-proyectos">
       <div class="Titulo-Cuerpo">
-        <div class="titulo-letra"><pre>De los planos....</pre></div>
+        <div class="titulo-letra"><pre>Ideas... </pre></div>
         <div class="titulo-restante">
-          <pre><span>A la realidad</span></pre>
+          <pre><span>hechas realidad</span></pre>
         </div>
       </div>
         <ListaProyectos class="list-animation"/>
@@ -34,7 +34,7 @@ export default {
   }
   .Titulo-Cuerpo{
   display: inline-block;
-  width: 60vw;
+  width: 70vw;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000;
@@ -127,7 +127,7 @@ export default {
   }
   100% {
     opacity: 1;
-    width: 180px;
+    width: 230px;
   }
 }
 

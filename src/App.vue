@@ -22,10 +22,6 @@ export default {
 }
 </script>
 
-<style>
-.nav-fix {
-  padding-top: 5em;
-  background-color: #ffffff;
-  min-height: 89vh;
-}
+<style lang="scss">
+  @import '@/assets/styles/main.scss';
 </style>
