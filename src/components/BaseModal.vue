@@ -1,6 +1,6 @@
 <template>
-  <div class="Modal-Altitude">
-    <div :class="['modal', showing_class]">
+  <div>
+    <div :class="['modal', showing_class]" @keyup.esc="close()" tabindex="0">
       <div class="contenido">
         <span class="cerrar" @click="close()">&times;</span>
         <h2>{{projectTitle}}</h2>
