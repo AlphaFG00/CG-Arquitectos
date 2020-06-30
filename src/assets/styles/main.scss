@@ -1,0 +1,25 @@
+/** Customizing bootstrap */
+$cggreen:rgb(11, 85, 11);
+$cggolden: #A37e2c;
+$cgblue: rgb(12, 52, 105);
+
+$theme-colors: (
+    "cggreen": $cggreen,
+    "cggolden": $cggolden,
+    "cgblue": $cgblue
+);
+
+$link-color: $cgblue; //red
+$link-hover-color: lighten($link-color, 15%);
+
+/** Bootstrap */
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/dist/bootstrap-vue.css';
+
+
+
+.nav-fix {
+    padding-top: 5em;
+    background-color: #ffffff;
+    min-height: 89vh;
+}
