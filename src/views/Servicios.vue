@@ -40,34 +40,6 @@
             </b-tabs>
           </b-card>
         </div>
-        <div id="slider">
-          <div class="contenido">
-            <div class="slide">
-                <h4>Diseño arquitectónico.</h4>
-                <b-container class="text-justify">Asesoramiento en todas las etapas del proyecto para llegar a la mejor solución arquitectónica, estética y funcional.</b-container>
-            </div>
-            <div class="slide">
-                <h4>Construcción</h4>
-                <b-container class="text-justify">Contamos con el equipo humano para materializar tu proyecto. Somos contratistas generales para entrega de proyectos llave en mano o según la necesidad.</b-container>
-            </div>
-            <div class="slide">
-                <h4>Consultoría en administración de la construcción</h4>
-                <b-container class="text-justify">Tanto en la etapa de planeacion o proyectos ya en proceso, ofrecemos asesoría en los gastos, en el proceso y en la administración.</b-container>
-            </div>
-            <div class="slide">
-                <h4>Desarrollo inmobiliario.</h4>
-                <b-container class="text-justify">Proyectos de inversión, aportación o consultoría, estamos para servirle.</b-container>
-            </div>
-            <div class="slide">
-                <h4>Gestión Inmobiliaria.</h4>
-                <b-container class="text-justify">Brindamos soluciones para comercializar tu propiedad, asi como todo lo relacionado a la gestión legal y de permisos para poder hacer la compra/venta de inmuebles.</b-container>
-            </div>
-            <div class="slide">
-                <h4> Mantenimiento</h4>
-                <b-container class="text-justify">Contamos con un equipo profesional de mantenimiento correctivo y preventivo en todos los rubros.</b-container>
-            </div>
-          </div>
-        </div>
         <!--Estructura para el efecto de textos desplazados "slider" FIN-->
       </div>
     </b-container>
