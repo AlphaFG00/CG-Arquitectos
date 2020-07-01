@@ -3,7 +3,7 @@
     <b-container id="view-servicios">
     <!--Estructura para el efecto del titulo INICIO-->
       <div class="Titulo-Cuerpo">
-        <div class="titulo-letra">Nosotros</div>
+        <div class="titulo-letra"><pre>Nosotros</pre></div>
         <div class="titulo-restante">
           <pre><span>te ayudamos</span></pre>
         </div>

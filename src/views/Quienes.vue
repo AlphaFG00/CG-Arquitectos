@@ -1,10 +1,11 @@
 <template>
   <div class="quienes">
     <b-container id="view-quienes">
+
       <div class="Titulo-Cuerpo">
-        <div class="titulo-letra">C+G</div>
+        <div class="titulo-letra"><pre>C+G</pre></div>
         <div class="titulo-restante">
-          <span>Desarrollos</span>
+          <pre><span>Arquitectura y Desarrollos</span></pre>
         </div>
       </div>
       <!--cuerpo de la pagina INICIO-->
@@ -77,7 +78,7 @@ export default {
   }
   .Titulo-Cuerpo{
   display: inline-block;
-  width: 60vw;
+  width: 80vw;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000;
@@ -106,12 +107,21 @@ export default {
 
   .titulo-restante{
     width: 0px;
-    animation: reveal 5s .4s forwards;
+    animation: reveal 2s .4s forwards;
   }
 
   .titulo-restante span{
-    margin-left: -100px;
+    margin-left: -50px;
     animation: slidein 5s .4s forwards;
+  }
+
+  .Titulo-Cuerpo pre{ /*texto demaciado grande, se nesecita pre para evitar modificaciones de html*/
+    margin: 0;
+    padding:0;
+    font-family: "Helvetica Neue","Arial Nova",Helvetica,Arial,sans-serif !important;
+    color: #A37e2c;
+    overflow: hidden;
+    font-size: 1em;
   }
 
   .primera-parte{
@@ -269,14 +279,14 @@ export default {
     width: 0px;
   }
   25% {
-    width: 170px;
+    width: 200px;
   }
   80% {
     opacity: 1;
   }
   100% {
     opacity: 1;
-    width: 170px;
+    width: 420px;
   }
 }
 

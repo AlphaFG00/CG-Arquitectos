@@ -34,7 +34,7 @@ export default {
   }
   .Titulo-Cuerpo{
   display: inline-block;
-  width: 70vw;
+  width: 60vw;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000;
@@ -70,7 +70,7 @@ export default {
 
   .titulo-restante{
     width: 0px;
-    animation: reveal 5s .4s forwards;
+    animation: reveal 3s .5s forwards;
   }
 
   .titulo-restante span{
@@ -120,14 +120,14 @@ export default {
     width: 0px;
   }
   25% {
-    width: 180px;
+    width: 200px;
   }
   80% {
     opacity: 1;
   }
   100% {
     opacity: 1;
-    width: 230px;
+    width: 240px;
   }
 }
 
@@ -169,7 +169,6 @@ export default {
       opacity: 1;
     }
   }
-
 
   @keyframes slideinright {
     from {
