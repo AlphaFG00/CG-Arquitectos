@@ -31,7 +31,7 @@
           </b-col>
         </b-row>
       </div>
-    <ContactForm/>
+      <ContactForm/>
     </b-container>
   </div>
 </template>

@@ -3,13 +3,13 @@ const firebase = require('firebase/app');
 require("firebase/firestore");
 
 const fire =  firebase.initializeApp({
-    apiKey: "AIzaSyCtaPzCfomTASo5oj3hvukWCqNojLWURtI",
-    authDomain: "trycrud1.firebaseapp.com",
-    databaseURL: "https://trycrud1.firebaseio.com",
-    projectId: "trycrud1",
-    storageBucket: "trycrud1.appspot.com",
-    messagingSenderId: "248022687242",
-    appId: "1:248022687242:web:1f1105d6e79858df"
+    apiKey: "AIzaSyBGzEyR2yrus-wAU6B7fHF_U6gR6AKQhCU",
+    authDomain: "email-garca.firebaseapp.com",
+    databaseURL: "https://email-garca.firebaseio.com",
+    projectId: "email-garca",
+    storageBucket: "email-garca.appspot.com",
+    messagingSenderId: "73020057706",
+    appId: "1:73020057706:web:c61948ffe3d57780a14213"
   })
 
 export default fire.firestore()

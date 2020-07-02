@@ -13,7 +13,7 @@ const actions = {
         {
             return new Promise((resolve, reject) => {
                 db.collection('mail').add({
-                    to: 'link@distribuidoraconchita.com',
+                    to: 'link@garcadesarrollos.com',
                     message: {
                         subject: 'Correo desde la pagina web',
                         html: `
@@ -28,7 +28,6 @@ const actions = {
                     resolve(res)
                 })
                 .catch((error => {
-                    console.log(error)
                     reject(error)
                 }))
             })
