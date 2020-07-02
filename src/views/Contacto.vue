@@ -3,7 +3,7 @@
     <b-container id="view-contacto">
     <!--Estructura para el efecto del titulo INICIO-->
       <div class="Titulo-Cuerpo">
-        <div class="titulo-letra">Cotactate</div>
+        <div class="titulo-letra">Contactate</div>
         <div class="titulo-restante">
           <pre><span>con Nosotros</span></pre>
         </div>
@@ -26,7 +26,7 @@
           <b-col cols="12" md="6" lg="6">
             <div class="Mapa">
               <span class="direccion">CRT. NACIONAL KM 262. LOS CRISTALES, MONTERREY, NUEVO LEÓN, MÉXICO CP. 64985</span>
-              <div style="width=100%; background-color: royalblue; height:200px;">*MAPA*</div>
+              <leaflet-map :coordinates="[25.539076, -100.2111175]" :height="200" />
             </div>
           </b-col>
         </b-row>
@@ -35,6 +35,19 @@
     </b-container>
   </div>
 </template>
+
+<script>
+import ContactForm from '@/components/ContactForm.vue';
+import Map from '@/components/Map.vue';
+
+export default {
+  name: 'Contacto',
+  components:{
+    ContactForm,
+    'leaflet-map': Map
+  }
+}
+</script>
 
 <style scoped lang="scss">
 
@@ -174,7 +187,7 @@ $tam-celda: 100%;
       margin-right: 5%;
     }
   }
-  .persona-contacto:first-child{
+  .persona-contacto {
     margin-bottom: 20px;
   }
   .Mapa{
@@ -191,13 +204,3 @@ $tam-celda: 100%;
 .icon-email{color: rgb(187, 39, 28) !important;}
 
 </style>
-
-<script>
-import ContactForm from '@/components/ContactForm.vue';
-export default {
-  name: 'Contacto',
-  components:{
-    ContactForm
-  }
-}
-</script>

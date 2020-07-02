@@ -3,9 +3,9 @@
     <b-container id="view-quienes">
 
       <div class="Titulo-Cuerpo">
-        <div class="titulo-letra"><pre>C+G</pre></div>
+        <div class="titulo-letra"><pre>C+G Arquitectura</pre></div>
         <div class="titulo-restante">
-          <pre><span>Arquitectura y Desarrollos</span></pre>
+          <pre><span>y Desarrollos</span></pre>
         </div>
       </div>
       <!--cuerpo de la pagina INICIO-->
@@ -77,21 +77,21 @@ export default {
     text-align: center;
   }
   .Titulo-Cuerpo{
-  display: inline-block;
-  width: 80vw;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  perspective: 1000;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  border-width: 4px;
-  border-bottom:double rgb(219, 196, 132);
-  border-top:double rgb(219, 196, 132);
-  animation-duration: 1s;
-  animation-name: slideinright;
-  margin-top: 15px;
-  margin-bottom: 10px;
+    display: inline-block;
+    width: 80vw;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    border-width: 4px;
+    border-bottom:double rgb(219, 196, 132);
+    border-top:double rgb(219, 196, 132);
+    animation-duration: 1s;
+    animation-name: slideinright;
+    margin-top: 15px;
+    margin-bottom: 10px;
   }
 
   .titulo-letra, .titulo-restante{
@@ -286,7 +286,7 @@ export default {
   }
   100% {
     opacity: 1;
-    width: 420px;
+    width: 200px;
   }
 }
 
