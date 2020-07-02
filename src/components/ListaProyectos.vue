@@ -133,7 +133,7 @@ export default {
           ]
         },
         {
-          projectTitle: 'Casa Abraham Rodriguez',
+          projectTitle: 'Casa Rodriguez',
           description: 'Diseño y construcción para remodelación de casa habitación (en proceso).',
           location: 'Guadalupe, N.L. ',
           area: '300 metros cuadrados',

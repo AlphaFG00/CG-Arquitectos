@@ -34,7 +34,7 @@ export default {
   }
   .Titulo-Cuerpo{
   display: inline-block;
-  width: 70vw;
+  width: 60vw;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000;
@@ -120,7 +120,7 @@ export default {
     width: 0px;
   }
   25% {
-    width: 180px;
+    width: 230px;
   }
   80% {
     opacity: 1;

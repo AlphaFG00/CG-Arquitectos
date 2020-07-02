@@ -2,9 +2,9 @@
   <div class="quienes">
     <b-container id="view-quienes">
       <div class="Titulo-Cuerpo">
-        <div class="titulo-letra">C+G</div>
+        <div class="titulo-letra">C+G Arquitectura</div>
         <div class="titulo-restante">
-          <span>Desarrollos</span>
+          <span style="display: inline-block">y Desarrollos</span>
         </div>
       </div>
       <!--cuerpo de la pagina INICIO-->
@@ -77,7 +77,7 @@ export default {
   }
   .Titulo-Cuerpo{
   display: inline-block;
-  width: 60vw;
+  width: 70vw;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000;
@@ -269,14 +269,14 @@ export default {
     width: 0px;
   }
   25% {
-    width: 170px;
+    width: 200px;
   }
   80% {
     opacity: 1;
   }
   100% {
     opacity: 1;
-    width: 170px;
+    width: 200px;
   }
 }
 
