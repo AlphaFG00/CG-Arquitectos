@@ -9,8 +9,11 @@
         </div>
       </div>
     <!--Estructura para el efecto del titulo INICIO-->
-      <div class="texto-servicios">
-        <b-container class="texto-explicativo text-justify">Ofrecemos a nuestros clientes una solución a sus problemas, creando esa empatía para vivir junto a el la experiencia de crecer y hacer realidad sus sueños, dando nuestra experiencia y soporte en todo lo relacionado a:</b-container>
+      <div class="texto-servicios mt-3">
+        <div class="container">
+          <b-container class="texto-explicativo text-justify">Ofrecemos a nuestros clientes una solución a sus problemas, creando esa empatía para vivir junto a el la experiencia de crecer y hacer realidad sus sueños, dando nuestra experiencia y soporte en todo lo relacionado a:</b-container>
+        </div>
+
         <!--Estructura para el efecto de textos desplazados "slider" INICIO-->
         <div>
           <b-card no-body class="mt-3 mb-3">
@@ -59,7 +62,7 @@
   }
   .Titulo-Cuerpo{
   display: inline-block;
-  width: 60vw;
+  width: 70vw;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000;
