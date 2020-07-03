@@ -62,7 +62,7 @@
   }
   .Titulo-Cuerpo{
   display: inline-block;
-  width: 70vw;
+  width: 60vw;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000;
