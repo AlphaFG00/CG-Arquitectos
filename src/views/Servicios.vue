@@ -9,8 +9,8 @@
         </div>
       </div>
     <!--Estructura para el efecto del titulo INICIO-->
-      <div class="texto-servicios mt-3">
-        <div class="container">
+      <div class="texto-servicios">
+        <div class="container mt-3 mb-4">
           <b-container class="texto-explicativo text-justify">Ofrecemos a nuestros clientes una solución a sus problemas, creando esa empatía para vivir junto a el la experiencia de crecer y hacer realidad sus sueños, dando nuestra experiencia y soporte en todo lo relacionado a:</b-container>
         </div>
 

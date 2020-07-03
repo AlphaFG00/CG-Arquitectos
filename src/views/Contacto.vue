@@ -1,5 +1,5 @@
 <template>
-  <div class="Contacto">
+  <div class="Contacto mb-3">
     <b-container id="view-contacto">
     <!--Estructura para el efecto del titulo INICIO-->
       <div class="Titulo-Cuerpo">
@@ -10,7 +10,7 @@
       </div>
     <!--Estructura para el efecto del titulo Final-->
       <div>
-        <b-row class="ViewCuerpo" align-v="center">
+        <b-row class="ViewCuerpo mt-4 mb-4" align-v="center">
           <b-col cols="12" md="6" lg="6">
             <div class="persona-contacto">
               <span>Arq. Rogelio Cázares Rodríguez</span>

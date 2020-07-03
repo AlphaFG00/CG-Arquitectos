@@ -11,9 +11,13 @@
         <router-link :to="{name: 'Servicios'}">Proyectos</router-link>
       </b-col>
       <b-col sm="4" class="text-center" order="1" order-sm="3">
-        <i class="fab fa-twitter-square color-tw"></i>
+        <a href="https://twitter.com/_cgarquitectura" target="_blank">
+          <i class="fab fa-twitter-square color-tw"></i>
+        </a>
         <i class="fab fa-facebook-square color-fb"></i>
-        <i class="fab fa-whatsapp-square color-wa"></i><br>
+        <a href="https://api.WhatsApp.com/send?phone=+5218119783811" target="_blank">
+          <i class="fab fa-whatsapp-square color-wa"></i>
+        </a><br>
         <span class="block">
           <i class="fas fa-phone-square color-phone"></i><span class="i_block ml-3">(+521) 811 978 3811</span>
         </span>

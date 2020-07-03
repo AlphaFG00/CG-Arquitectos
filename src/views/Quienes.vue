@@ -10,7 +10,7 @@
       </div>
       <!--cuerpo de la pagina INICIO-->
       <b-container class="texto_quienes">
-        <b-container class="primera-parte text-justify">
+        <b-container class="primera-parte text-justify mt-3 mb-4">
           Fundada por profesionales en el ramo, en C+G Arquitectura y Desarrollos buscamos, de la mano con los clientes, crear esos espacios que les dignifiquen a ellos como a su entorno, llegando a la realización de ese proyecto que forma parte de su vida. Con una idea clara y compromiso, hemos dedicado nuestra experiencia a desarrollar proyectos integrando los valores que nos caracterizan, siendo estos:
         </b-container>
         <span class="segunda-parte">
