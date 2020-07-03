@@ -9,29 +9,22 @@
           @sliding-start="sliding = true"
           @sliding-end="sliding = false"
     >
-      <ol id="CarouselProyectos___BV_indicators_" class="carousel-indicators Lista-color" aria-hidden="false" aria-label="Select a slide to display" aria-owns="CarouselProyectos___BV_inner_">
+      <ol
+        id="CarouselProyectos___BV_indicators_" class="carousel-indicators Lista-color"
+        aria-hidden="false" aria-label="Select a slide to display" aria-owns="CarouselProyectos___BV_inner_"
+      >
         <!--Si se necesita agregar mas proyectos se hace otra paguina para el carrucel con esto:-->
-        <li role="button" id="CarouselProyectos___BV_indicator_1_" data-slide-to="0" aria-current="false" aria-label="Goto Slide 1" aria-controls="CarouselProyectos___BV_inner_" @click="setSlide(0)" :class="(slide == 0) ? 'active' : ''"></li>
-        <li role="button" id="CarouselProyectos___BV_indicator_2_" data-slide-to="1" aria-current="false" aria-label="Goto Slide 2" aria-controls="CarouselProyectos___BV_inner_" @click="setSlide(1)" :class="(slide == 1) ? 'active' : ''"></li>
+        <li
+          v-for="i in myCeil(projects_data.length / show_each)" :key="i"
+          role="button" :data-slide-to="i - 1" aria-current="false" :aria-label="`Goto Slide ${i - 1}`"
+          aria-controls="CarouselProyectos___BV_inner_" @click="setSlide(i - 1)" :class="(slide == i - 1) ? 'active' : ''"
+        />
       </ol>
-      <b-carousel-slide>
+      <b-carousel-slide v-for="i in myCeil(projects_data.length / show_each)" :key="i">
         <template>
           <!--Saca las imagenes y nombres de images del store-->
-          <b-row class="contenedor">
-            <b-col cols="12" md="6" lg="4" class="thumbex" v-for="(image, index) in images" :key="index">
-              <div class="thumbnail" @click="showModel(index)">
-                <b-img fluid :src="getImgUrl(image.name)" :alt="image.name" class="img-proyecto"></b-img>
-                <span>{{image.title}}</span>
-              </div>
-            </b-col>
-          </b-row>
-        </template>
-      </b-carousel-slide>
-        <!--Pack de 6-->
-      <b-carousel-slide>
-        <template>
-          <b-row class="contenedor">
-            <b-col cols="12" md="6" lg="4" class="thumbex" v-for="(image, index) in images" :key="index">
+          <b-row align-v="center" class="contenedor">
+            <b-col cols="12" md="6" lg="4" class="thumbex" v-for="(image, index) in images.slice(show_each * (i-1), show_each * i)" :key="index">
               <div class="thumbnail" @click="showModel(index)">
                 <b-img fluid :src="getImgUrl(image.name)" :alt="image.name" class="img-proyecto"></b-img>
                 <span>{{image.title}}</span>
@@ -82,6 +75,7 @@ export default {
     return {
       slide: 0,
       sliding: null,
+      show_each: 3,
       projects_data: [
         {
           projectTitle: 'Altitude',
@@ -184,6 +178,9 @@ export default {
     },
     setSlide(indice) {
       this.$refs.CarouselProyectos.setSlide(indice)
+    },
+    myCeil(number) {
+      return Math.ceil(number)
     }
   }
 }
