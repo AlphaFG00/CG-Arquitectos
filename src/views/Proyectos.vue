@@ -65,12 +65,12 @@ export default {
     font-size: 1em;
   }
   .titulo-letra{
-    animation: showup 5s forwards;
+    animation: showup 3s forwards;
   }
 
   .titulo-restante{
     width: 0px;
-    animation: reveal 3s .5s forwards;
+    animation: reveal 2s .5s forwards;
   }
 
   .titulo-restante span{

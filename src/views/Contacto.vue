@@ -9,7 +9,7 @@
         </div>
       </div>
     <!--Estructura para el efecto del titulo Final-->
-      <div>
+      <div class="Primera parte">
         <b-row class="ViewCuerpo" align-v="center">
           <b-col cols="12" md="6" lg="6">
             <div class="persona-contacto">
@@ -24,14 +24,17 @@
             </div>
           </b-col>
           <b-col cols="12" md="6" lg="6">
+            <ContactForm/>
+          </b-col>
+          <b-col cols="12" md="12" lg="12">
             <div class="Mapa">
               <span class="direccion">CRT. NACIONAL KM 262. LOS CRISTALES, MONTERREY, NUEVO LEÓN, MÉXICO CP. 64985</span>
-              <leaflet-map :coordinates="[25.539076, -100.2111175]" :height="200" />
+              <leaflet-map :coordinates="[25.539076, -100.2111175]" :height="220" />
             </div>
           </b-col>
         </b-row>
       </div>
-      <ContactForm/>
+
     </b-container>
   </div>
 </template>
@@ -176,22 +179,31 @@ $tam-celda: 100%;
   .persona-contacto{
     border: solid 1px rgb(219, 196, 132);
     text-align: left;
-    >span{/*Hijos directos*/
+    margin-bottom: 20px;
+    >span:nth-child(2),>span:nth-child(3){/*Hijos directos*/
       margin-left: 3%;
       display: block;
       font-family:Arial, Helvetica, sans-serif;
       font-size: .9em;
+      height: 50px;
     }
     >span .icon-email,>span .icon-phone{
       font-size: $icons-size;
       margin-right: 5%;
     }
-  }
-  .persona-contacto {
-    margin-bottom: 20px;
+    >span:first-child{
+      display: block;
+      margin-bottom: 15px;
+      background-color:rgb(233, 233, 233);
+      color:rgb(9, 73, 9);
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-align: center;
+      margin-left: 0;
+    }
   }
   .Mapa{
     border: solid 1px rgb(219, 196, 132);
+    margin-top: 10px;
     .direccion{
       display: block;
       width: 100%;

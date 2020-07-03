@@ -78,7 +78,7 @@ export default {
   }
   .Titulo-Cuerpo{
     display: inline-block;
-    width: 80vw;
+    width: 60vw;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-perspective: 1000;

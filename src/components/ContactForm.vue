@@ -15,7 +15,7 @@
                     id="input-1"
                     v-model="form.name"
                     required
-                    placeholder="Enter name"
+                    placeholder="Ingrese su nombre"
                 />
             </b-form-group>
 
@@ -40,7 +40,7 @@
                     v-model="form.number"
                     type="text"
                     required
-                    placeholder="Ingrese su correo"
+                    placeholder="Ingrese su número teléfonico"
                 />
             </b-form-group>
 
@@ -130,8 +130,8 @@
 </script>
 
 <style lang="scss" scoped>
-$sizeInBlock: 80%;
-$sizeOfLaterals:10%;
+$sizeInBlock: 100%;
+$sizeOfLaterals:0%;
 /*sizeInBlock + 2(sizeOfLaterals) has to be equal to 100% */
     .ContactForm{
         margin-top: 10px;
@@ -140,8 +140,8 @@ $sizeOfLaterals:10%;
         max-width: $sizeInBlock;
         margin-right: $sizeOfLaterals/2;
         margin-left: $sizeOfLaterals/2;
-        padding-right: $sizeOfLaterals/2;
-        padding-left: $sizeOfLaterals/2;
+        padding-right: 2.5%;
+        padding-left: 2.5%;
         border: solid 2px rgb(219, 196, 132);
         font-size: .8em;
         .form-group{
