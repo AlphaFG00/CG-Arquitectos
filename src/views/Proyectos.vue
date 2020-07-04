@@ -4,7 +4,7 @@
       <div class="Titulo-Cuerpo">
         <div class="titulo-letra"><pre>Ideas... </pre></div>
         <div class="titulo-restante">
-          <pre><span>hechas realidad</span></pre>
+          <pre><span>Hechas Realidad</span></pre>
         </div>
       </div>
         <ListaProyectos class="list-animation"/>
