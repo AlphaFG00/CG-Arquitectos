@@ -187,7 +187,7 @@ export default {
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
   /*css - tabla de proyectos */
 .contenedor {
@@ -260,29 +260,38 @@ export default {
 /*Tiene que ajustarse para el tamaño del carrucel de una sola fila en moviles */
 @media (min-width: 0) and (max-width: 767px){
   .carousel-item{
-    min-height: 1200px;
-    height: 1200px;
+    min-height: 750px;
+    height: 750px;
+  }
+  .contenedor{
+    align-content: center;
   }
   .contenedor>.thumbex>.thumbnail {
     max-width: 300px;
+    margin: 0px auto;
  }
  .contenedor>.thumbex>.thumbnail span{
    max-width: 65%;
+   margin: 0px auto;
  }
 }
 
 @media (min-width: 768px) and (max-width: 992px){
   .carousel-item {
-    min-height: 760px !important;
-    height: 760px !important;
+    min-height: 520px !important;
+    height: 520px !important;
   }
+
  }
 
 @media (min-width: 993px) and (orientation: landscape){
+  .lista-proyectos{
+    margin-top: 200px;
+  }
   .carousel-item {
-    min-height: 512px !important;
-    height: 66vh;
-    max-height: 600px !important;
+    min-height: 300px !important;
+    height: 33vh;
+    max-height: 400px !important;
   }
 }
 

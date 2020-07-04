@@ -28,8 +28,8 @@
           </b-col>
           <b-col cols="12" md="12" lg="12" class="mt-4">
             <div class="Mapa">
-              <span class="direccion">CRT. NACIONAL KM 262. LOS CRISTALES, MONTERREY, NUEVO LEÓN, MÉXICO CP. 64985</span>
-              <leaflet-map :coordinates="[25.539076, -100.2111175]" :height="220" />
+              <span class="direccion">Av Lázaro Cárdenas 301, Haciendas de La Sierra, 66260 San Pedro Garza García, Nuevo León</span>
+              <leaflet-map :coordinates="[25.644954, -100.321814]" :height="220" />
             </div>
           </b-col>
         </b-row>
