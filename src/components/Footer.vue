@@ -14,7 +14,7 @@
         <a href="https://twitter.com/_cgarquitectura" target="_blank">
           <i class="fab fa-twitter-square color-tw"></i>
         </a>
-        <a href="https://www.facebook.com/garcadesarrollos/" target="_blank">
+        <a href="" target="_blank">
           <i class="fab fa-facebook-square color-fb"></i>
         </a>
         <a href="https://api.WhatsApp.com/send?phone=+5218119783811" target="_blank">
