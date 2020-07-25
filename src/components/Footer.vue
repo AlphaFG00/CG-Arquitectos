@@ -17,6 +17,9 @@
         <a href="https://www.facebook.com/CG-Arquitectura-y-Desarrollos-106084567863601/" target="_blank">
           <i class="fab fa-facebook-square color-fb"></i>
         </a>
+        <a href="https://www.instagram.com/cgarqydesarrollos/" target="_blank">
+          <i class="fab fa-instagram-square" style="color: deeppink"></i>
+        </a>
         <a href="https://api.WhatsApp.com/send?phone=+5218119783811" target="_blank">
           <i class="fab fa-whatsapp-square color-wa"></i>
         </a><br>
