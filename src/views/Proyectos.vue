@@ -127,7 +127,7 @@ export default {
   }
   100% {
     opacity: 1;
-    width: 240px;
+    width: 250px;
   }
 }
 
